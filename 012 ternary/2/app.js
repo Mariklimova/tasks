@@ -1,8 +1,16 @@
-let a = +prompt();
-if (a%2===0 ) {
-    console.log(true);
+// 2. Выявить является ли введенное число четным
+
+
+let a = +prompt('введите число');
+
+
+// 1
+if (a % 2 === 0) {
+    console.log('четное');
 } else {
-    console.log(true);
+    console.log('нечетное');
 }
 
-a%2===0 ? console.log(true):console.log(true); 
+
+// 2
+a % 2 === 0 ? console.log('четное') : console.log('нечетное'); 
