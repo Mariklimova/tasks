@@ -3,7 +3,9 @@
 
 let str = 'HTML JavaScript PHP'
 
+// 1
 console.log(str.split(' ').join('-').toUpperCase());
 
-console.log(str.replaceAll(' ', '-'));
+// 2
+console.log(str.toUpperCase().replaceAll(' ', '-'));
 

@@ -2,9 +2,9 @@
 
 
 
-
+// 1
 let str = prompt().trim();
 console.log(str.replaceAll('@', '!'));
 
-
+// 2
 console.log(str.split('@').join('!'));

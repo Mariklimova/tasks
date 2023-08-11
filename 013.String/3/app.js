@@ -6,18 +6,18 @@
 let str = prompt().toLowerCase().trim();
 
 if (!isNaN(str)) {
-    console.log(false);
+    console.log('ошибка ввода');
 } else {
     console.log(str.length);
 }
 
 
 // 2
-if (!isNaN(str)) console.log(false);
+if (!isNaN(str)) console.log('ошибка ввода');
 else console.log(str.length);
 
 // 3
-!isNaN(str) ? console.log(false) : console.log(str.length);
+!isNaN(str) ? console.log('ошибка ввода') : console.log(str.length);
 
 // 4
-console.log(!isNaN(str) ? false : str.length);
+console.log(!isNaN(str) ? 'ошибка ввода' : str.length);

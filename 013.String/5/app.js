@@ -3,23 +3,23 @@
 // Убрать лишние пробелы
 
 
-let str = prompt().trim();
+let str = prompt('введите строку текста').trim();
 // 1
 if (isNaN(str)) {
     console.log(str[0].toUpperCase());
 } else {
-    console.log('error');
+    console.log('ошибка ввода');
 }
 // 2
-console.log(isNaN(str) ? str[0].toUpperCase() : 'error');
+console.log(isNaN(str) ? str[0].toUpperCase() : 'ошибка ввода');
 // 3
-isNaN(str) ? console.log(str[0].toUpperCase()) : console.log('error');
+isNaN(str) ? console.log(str[0].toUpperCase()) : console.log('ошибка ввода');
 // 4
 if (isNaN(str)) console.log(str[0].toUpperCase());
-else console.log('error');
-
+else console.log('ошибка ввода');
+// доп
 if (isNaN(str)) {
     console.log(str[0].toUpperCase() + str.slice(1));
 } else {
-    console.log('error');
+    console.log('ошибка ввода');
 }

@@ -3,17 +3,35 @@
 // каждый символ – один элемент массива
 // ‘hschool’ => [‘h’, ‘s’, ‘c’, ‘h’, ‘o’, ‘o’, ‘l’]
 
-let str = prompt();
+let str = prompt('введите любую строку текста');
 
+
+// 1
 if (isNaN(str)) {
     console.log(str.split(''));
 } else {
-    // if (str%2===0) {
-    //     console.log('четное');
-    // } else {
-    //     console.log('нечетное');
-    // }
-
-        // str % 2 === 0 ? console.log('четное') : console.log('нечетное');
-        console.log(str % 2 === 0 ? 'четное': 'нечетное');
+    if (str % 2 === 0) {
+        console.log('четное');
+    } else {
+        console.log('нечетное');
+    }
 }
+
+
+
+// 2
+if (isNaN(str)) {
+    console.log(str.split(''));
+} else {
+    str % 2 === 0 ? console.log('четное') : console.log('нечетное');
+}
+
+
+
+// 3
+if (isNaN(str)) {
+    console.log(str.split(''));
+} else {
+    console.log(str % 2 === 0 ? 'четное' : 'нечетное');
+}
+

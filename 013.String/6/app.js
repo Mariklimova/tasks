@@ -6,12 +6,12 @@
 const str = prompt();
 
 
-if (isNaN(str)){
-    if (str.includes('.com')|| str.includes('.ru')) {
+if (isNaN(str)) {
+    if (str.includes('.com') || str.includes('.ru')) {
         console.log(true);
     } else {
         console.log(false);
     }
 } else {
-    
+    console.log('error');
 }
