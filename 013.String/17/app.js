@@ -4,7 +4,7 @@
 // я очень хороший текст => true
 
 
-let str = prompt().toLowerCase();
+let str = prompt('введите текст').toLowerCase();
 
 if (str.includes('хорош')) {
     console.log(true);
