@@ -2,3 +2,6 @@
 // ровно одним пробелом. Напишите программу, которая подсчитывает количество
 // слов в ней
 
+let str = 'Software engineer'.split(' ')
+
+console.log(str.length);
