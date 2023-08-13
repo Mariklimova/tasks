@@ -3,9 +3,9 @@
 // ними равно S км. Добавить проверку на ввод только чисел
 
 
-let v1 = +prompt('введите значение скорости v1');
-let v2 = +prompt('введите значение скорости v2');
-let s = +prompt('введите значение расстояния s');
+let v1 = prompt('введите значение скорости v1');
+let v2 = prompt('введите значение скорости v2');
+let s = prompt('введите значение расстояния s');
 
 // 1
 if (isNaN(v1) || isNaN(v2) || isNaN(s)) {
@@ -16,3 +16,10 @@ if (isNaN(v1) || isNaN(v2) || isNaN(s)) {
 
 // 2
 isNaN(v1) || isNaN(v2) || isNaN(s) ? console.log('error') : console.log(s / (v1 + v2))
+
+// 3
+console.log(isNaN(v1) || isNaN(v2) || isNaN(s)?'error':s / (v1 + v2));
+
+// 4
+if (isNaN(v1) || isNaN(v2) || isNaN(s)) console.log('error');
+else console.log(s / (v1 + v2));

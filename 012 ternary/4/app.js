@@ -14,3 +14,7 @@ if (isNaN(x)) {
 
 // 2
 isNaN(x) ? console.log(false) : console.log(true);
+
+
+// 3
+console.log(isNaN(x)? false: true);

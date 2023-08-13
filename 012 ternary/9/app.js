@@ -2,20 +2,20 @@
 // 'зима', '2' – 'весна' и так далее. Добавить проверку на ввод только чисел. Решите
 // задачу через switch-case.
 
-let num = prompt();
+let num = prompt('введите чило от 1 до 4');
 
 if (isNaN(num)) {
     console.log('вы ввели букву')
 } else {
-    switch (nam) {
+    switch (num) {
         case '1':
-            console.log('winter');
+            console.log('зима');
             break;
         case '2':
-            console.log('spring');
+            console.log('весна');
             break;
         case '3':
-            console.log('sammer');
+            console.log('лето');
             break;
         case '4':
             console.log('осень');

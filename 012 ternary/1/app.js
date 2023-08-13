@@ -18,4 +18,7 @@ if (a > b) {
 (a > b) ? console.log(a) : console.log(b);
 
 // 3
-console.log(Math.max(a,b));
+console.log(a > b ? a : b);
+
+// 4
+console.log(Math.max(a, b));
