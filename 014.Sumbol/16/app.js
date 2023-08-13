@@ -8,3 +8,7 @@ let str = 'hSСhOol СomPAnY';
 console.log('#'+str.toLowerCase().split(' ').join(''));
 
 // 2
+console.log('#'+str.toLowerCase().replaceAll(' ',''));
+
+// 3
+console.log(`${'#'}${str.toLowerCase().replaceAll(' ','')}`);

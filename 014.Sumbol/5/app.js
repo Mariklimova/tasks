@@ -3,10 +3,12 @@
 // https://www.instagram.com/hschool.official/ -> www.instagram.com/hschool.official/
 
 
-let url =  'http://www.instagram.com/hschool.official/';
+let url =  'https://www.instagram.com/hschool.official/';
+
 // 1
 console.log(url.slice(8));
 
 // 2
 console.log(url.slice(url.indexOf('w')));
+
 

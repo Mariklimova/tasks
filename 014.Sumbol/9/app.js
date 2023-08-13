@@ -6,13 +6,13 @@ let str = '123@1@@34'
 
 console.log(str.replaceAll('@', ''));
 
-let resalt = '';
+let result = '';
 
 for (let i = 0; i < str.length; 1++) {
     if (str[i] != '@') {
-        resalt += srt[i]
+        result += srt[i]
     }
 
 }
-console.log(resalt);
+console.log(result);
 console.log(str.replaceAll('@', ''));

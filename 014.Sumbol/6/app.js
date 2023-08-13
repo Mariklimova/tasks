@@ -4,4 +4,4 @@
 
 let str = '/home/user/dir/file.txt'
 
-console.log(str.slice(lastIndexOf('/')+1));
+console.log(str.slice(lastIndexOf('/') + 1));
