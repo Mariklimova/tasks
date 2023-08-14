@@ -4,8 +4,14 @@
 // anna_test_test -> annaTestTest
 
 // 1
-let str = 'anna_test_test'.split('_t').join('T');
-console.log(str);
+// let str = 'anna_test_test'.split('_t').join('T');
+// console.log(str);
 
 
 // 2
+let str = 'anna_test_test'.split('_');
+for (i = 1; i < str.length; i++){
+    // str2=str[i].toUpperCase();
+    result = `${str[0]}${str[i][0].toUpperCase()}`;
+}
+console.log(result);

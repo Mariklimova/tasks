@@ -4,15 +4,12 @@
 
 let str = '123@1@@34'
 
-console.log(str.replaceAll('@', ''));
-
 let result = '';
 
-for (let i = 0; i < str.length; 1++) {
-    if (str[i] != '@') {
-        result += srt[i]
+for (let i = 0; i < str.length; i++) {
+    if (str[i] !== '@') {
+        result += str[i];
     }
-
 }
 console.log(result);
 console.log(str.replaceAll('@', ''));
