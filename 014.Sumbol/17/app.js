@@ -10,8 +10,8 @@
 
 // 2
 let str = 'anna_test_test'.split('_');
+let result = str[0];
 for (i = 1; i < str.length; i++){
-    // str2=str[i].toUpperCase();
-    result = `${str[0]}${str[i][0].toUpperCase()}`;
+    result+=str[i][0].toUpperCase() + str[i].slice(1);
 }
 console.log(result);

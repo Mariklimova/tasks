@@ -3,9 +3,9 @@
 // АааГГЦЦцТТтттА => А – 4; Г – 2; Ц – 3; Т – 5
 
 let str = 'АааГГЦЦцТТтттА'.toUpperCase();
-
-for (i = 0; i < str.length; i++) {
-if (i===a) {
+let a =0
+for (let i = 0; i < str.length; i++) {
+if (str[i]==='А') {
     
 }
 }
