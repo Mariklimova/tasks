@@ -4,6 +4,7 @@
 
 let mas = [1, 2, 3, 4, 5, 6];
 let res = 1;
+
 for (i = 0; i < mas.length; i++) {
     res *= mas[i]
 }

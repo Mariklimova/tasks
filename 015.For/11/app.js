@@ -11,6 +11,6 @@
 
 
 let n = 7;
-for (let i = n; i >=0; i--) {
+for (let i = n; i >= 0; i--) {
     console.log('*'.repeat(i));
 }

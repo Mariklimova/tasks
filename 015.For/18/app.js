@@ -7,11 +7,11 @@
 
 let num = '1234';
 let res = '';
-for(let i = 0; i<num.length;i++){
-    if (num[i]%2===0) {
-        res+=num[i]+' чет ';
-    }else{
-        res+=num[i]+' неч '; 
+for (let i = 0; i < num.length; i++) {
+    if (num[i] % 2 === 0) {
+        res += num[i] + ' чет ';
+    } else {
+        res += num[i] + ' неч ';
     }
 }
 console.log(res);

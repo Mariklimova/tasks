@@ -3,9 +3,20 @@
 // АааГГЦЦцТТтттА => А – 4; Г – 2; Ц – 3; Т – 5
 
 let str = 'АааГГЦЦцТТтттА'.toUpperCase();
-let a =0
+let a = 0;
+let g = 0;
+let c = 0;
+let t = 0;
+
 for (let i = 0; i < str.length; i++) {
-if (str[i]==='А') {
-    
+    if (str[i] === 'А') {
+        a++;
+    } else if (str[i] === 'Г') {
+        g++;
+    } else if (str[i] === 'Ц') {
+        c++;
+    } else if (str[i] === 'Т') {
+        t++;
+    }
 }
-}
+console.log(`${'А - '} ${a}${'; Г - '}${g}${'; Ц - '}${c}${'; Т - '}${t} `)

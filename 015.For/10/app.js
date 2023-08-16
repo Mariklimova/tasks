@@ -14,3 +14,4 @@ if (str1.sort().join('') === str2.sort().join('')) {
 }
 
 // 2
+console.log(str1.sort().join('') === str2.sort().join('') ? true : false);
