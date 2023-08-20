@@ -4,9 +4,19 @@
 
 let a = +prompt('введите значение');
 
-
+// 1
 if ((a % 2) == 0) {
-    alert('true');
+    console.log(true);
 } else {
-    alert('false');
+    console.log(false);
 }
+
+// 2
+if ((a % 2) == 0) console.log(true);
+else console.log(false);
+
+// 3
+(a % 2) == 0 ? console.log(true) : console.log(false);
+
+// 4
+console.log((a % 2) == 0 ? true : false);

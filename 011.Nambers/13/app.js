@@ -5,9 +5,9 @@
 let a = +prompt('введите значение');
 
 if (a < 0 && a != 0) {
-    alert('Отрицательное')
+    console.log('Отрицательное');
 } else if (a > 0 && a != 0) {
-    alert('Положительное')
+    console.log('Положительное');
 } else if (a == 0) {
-    alert('Ноль')
+    console.log('Ноль');
 }
