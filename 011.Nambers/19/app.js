@@ -9,7 +9,7 @@ let c = +prompt('введите число c');
 let D = b ** 2 - 4 * a * c;
 let x1;
 let x2;
-let x = [x1 = (-b + Math.sqrt(D)) / (2 * a),  x2 = (-b - Math.sqrt(D)) / (2 * a)];
+let x = [x1 = (-b + Math.sqrt(D)) / (2 * a), x2 = (-b - Math.sqrt(D)) / (2 * a)];
 
 
 if (D == 0) {
@@ -18,8 +18,7 @@ if (D == 0) {
 } else if (D > 0) {
     x1 = (-b + Math.sqrt(D)) / (2 * a);
     x2 = (-b - Math.sqrt(D)) / (2 * a);
-       console.log(x.sort(function (x1, x2) { return x1 - x2 }));
-
+    console.log(x.sort(function (x1, x2) { return x1 - x2 }));
 } else {
     console.log('корней нет');
 }

@@ -5,8 +5,17 @@
 let a = +prompt('введите число a');
 let b = +prompt('введите число b');
 
+// 1
 if (a % b === 0) {
     console.log('Делится', a / b);
 } else {
     console.log('Делится с остатком', a % b);
 }
+
+// 2
+if (a % b === 0) console.log('Делится', a / b);
+else console.log('Делится с остатком', a % b);
+
+// 3
+(a % b === 0) ? console.log('Делится', a / b) : console.log('Делится с остатком', a % b);
+
