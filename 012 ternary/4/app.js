@@ -11,10 +11,13 @@ if (isNaN(x)) {
     console.log(true);
 }
 
-
 // 2
+if (isNaN(x)) console.log(false);
+else console.log(true);
+
+// 3
 isNaN(x) ? console.log(false) : console.log(true);
 
 
-// 3
-console.log(isNaN(x)? false: true);
+// 4
+console.log(isNaN(x) ? false : true);

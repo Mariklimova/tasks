@@ -4,7 +4,7 @@
 
 let x = prompt('введите число');
 
-
+// 1
 if (isNaN(x)) {
     console.log('error');
 } else {
@@ -14,3 +14,14 @@ if (isNaN(x)) {
         console.log('число отрицательное', x);
     }
 }
+
+// 2
+if (isNaN(x)) {
+    console.log('error');
+} else {
+    if (x >= 0) console.log('число положительное', x);
+    else console.log('число отрицательное', x);
+}
+
+
+

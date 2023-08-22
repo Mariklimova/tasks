@@ -15,10 +15,14 @@ if (a > b) {
 }
 
 // 2
-(a > b) ? console.log(a) : console.log(b);
+if (a > b) console.log(a);
+else console.log(b);
 
 // 3
-console.log(a > b ? a : b);
+(a > b) ? console.log(a) : console.log(b);
 
 // 4
+console.log(a > b ? a : b);
+
+// 5
 console.log(Math.max(a, b));
