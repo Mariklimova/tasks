@@ -18,6 +18,7 @@ let i = 0;
 // console.log(res); 
 
 // 3
+
 while (i < arr.length) {
     res *= arr[i];
     i++
