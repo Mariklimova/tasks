@@ -15,11 +15,11 @@ console.log(arr);
 
 // 2
 let arr2 = [];
-while(true){
+while (true) {
     arr2.push(prompt())
     if (arr2.length === 5) {
         break
-    } 
+    }
 }
 console.log(arr2);
 

@@ -18,8 +18,8 @@ let res = arr.filter(function (elem) {
     }
 })
 
-if (res.length>0) {
+if (res.length > 0) {
     console.log(res);
-}else{
+} else {
     console.log('Массив пуст');
 }

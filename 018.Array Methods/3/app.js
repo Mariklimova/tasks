@@ -5,21 +5,21 @@
 // 1, 1, 3, 4, 4, 4, 2, 5 -> 1, 2, 3, 4, 5
 
 
-let n = +prompt();
+let n = +prompt('введите количество элементов массива');
 
 let arr = [];
 
-for (let i = 0; i<n;i++){
+for (let i = 0; i < n; i++) {
     let inputNum = (prompt('element'));
     if (!isNaN(inputNum)) {
-        arr.push (inputNum);  
+        arr.push(inputNum);
     }
 }
 
 let nArr = [];
-for( let i = 0; i<arr.length;i++){
+for (let i = 0; i < arr.length; i++) {
     if (!nArr.includes(arr[i])) {
-      nArr.push(arr[i])  
+        nArr.push(arr[i])
     }
 }
 
