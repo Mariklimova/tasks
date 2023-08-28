@@ -4,12 +4,12 @@
 
 
 
-let n = prompt();
+let n = prompt('введите количество элементов массива');
 let arr = [];
 
 
 for (let i = 0; i < n; i++) {
-    arr.push(prompt());
+    arr.push(prompt('введите элементы массива'));
 }
 
 let res = arr.every(function (el) {

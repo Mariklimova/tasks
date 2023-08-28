@@ -12,7 +12,7 @@ let arr = [];
 
 
 for (let i = 0; i < num; i++) {
-    arr.push(prompt())
+    arr.push(prompt('введите значение массива'))
 }
 
 let res = arr.filter(function (elem) {
