@@ -18,8 +18,8 @@ for (let i = 0; i < n; i++) {
 
 
 // 2
-let res = arr.map(function(el){
-    return '#'+el
+let res = arr.map(function (el) {
+    return `# ${el}`;
 })
 console.log(res);
 
