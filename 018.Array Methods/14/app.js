@@ -10,6 +10,7 @@ for (let i = 0; i < n; i++) {
     arr.push(prompt())
 }
 
+// 1
 // let nArr = [];
 // arr.forEach(function (el) {
 //     nArr.push('#' + el)
@@ -19,7 +20,7 @@ for (let i = 0; i < n; i++) {
 
 // 2
 let res = arr.map(function (el) {
-    return `# ${el}`;
+    return `#${el}`;
 })
 console.log(res);
 

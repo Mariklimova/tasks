@@ -10,3 +10,28 @@
 // 5 -> [[1, 2, 3, 4, 5], [6]]
 // 6 -> [[1, 2, 3, 4, 5, 6]]
 
+
+
+
+let arr = [1, 2, 3, 4, 5, 6];
+let n = 7; //после проверки заменить на промт
+let res = [];
+
+if (isNaN(n) && n > arr.length && n !== (null || undefined)) {
+    console.log('error');
+} else {
+    for (let i = 0; i < n; i++) {
+        arr[i] = [1, 2, 3, 4, 5, 6];
+        res.push(arr[i]);
+    }
+    console.log(res);
+}
+
+
+// for (let i = 0; i < n; i++) {
+//     arr[i] = [];
+//     res.push(arr[i]);
+// }
+// console.log(res);
+
+
