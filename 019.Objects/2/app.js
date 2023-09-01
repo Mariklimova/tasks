@@ -6,8 +6,8 @@ const obj = {
     2: 'cjdcj',
     text: 23,
 }
-for(let key in obj){
+for (let key in obj) {
     if (!isNaN(key)) {
-        
+        console.log(key);
     }
 }

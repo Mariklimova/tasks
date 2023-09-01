@@ -8,5 +8,7 @@ const obj = {};
 
 obj.id = 1;
 obj.name = 'udemy';
-obj.id = 'hschool';
+obj.name = 'hschool';
 delete obj.name;
+
+console.log(obj);

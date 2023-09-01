@@ -4,10 +4,10 @@ const obj = {
     id: 436,
     name: 'Marina',
     age: '25',
+    role: 'engineer'
 }
 for (const key in obj) {
     if (!isNaN(obj[key])) {
-       console.log(obj[key]);
-        
+        console.log(obj[key]);
     }
 }

@@ -8,8 +8,7 @@ const obj = {
 }
 
 for (const key in obj) {
-    if (obj[key]%2===0) {
-       console.log(obj[key]);
-        
+    if (obj[key] % 2 === 0) {
+        console.log(obj[key]);
     }
 }
