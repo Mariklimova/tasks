@@ -4,6 +4,15 @@
 
 const obj = {
     id: 1,
-    age: 40,
-    
+    age: 10,
+    name: 'Agata',
+    surname: 'Klimova'
 }
+
+let res = 0;
+for (const key in obj) {
+    if (!isNaN(obj[key])) {
+        res++
+    }
+}
+console.log(res);

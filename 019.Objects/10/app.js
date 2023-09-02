@@ -3,3 +3,17 @@
 // объект соответствующими данными. Добавить проверки на ввод
 
 
+const obj = {
+    name: null,
+    age: null,
+    birthday: null
+}
+for (const key in obj) {
+    if (obj[key] === null) {
+        obj.name = 'Agata';
+        obj.age = 10;
+        obj.birthday = 11.12;
+    }
+}
+console.log(obj);
+
