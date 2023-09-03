@@ -6,5 +6,8 @@ const obj = {};
 let num1 = +prompt('введите первое число');
 let num2 = +prompt('введите второе число');
 
-obj.avg = num1 + num2;
+
+obj.avg = (num1 + num2) / 2;
 console.log(obj);
+
+

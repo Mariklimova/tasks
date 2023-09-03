@@ -3,20 +3,17 @@
 
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const obj = {};
-const key = {};
+let key = {};
 for (let i = 0; i < arr.length; i++) {
+
     if (arr[i] % 2 === 0) {
-       obj[key] = true;
+        key = true;
     } else {
-        obj[key] = false;
+        key = false;
     }
-    obj.key = arr[i];
+
+    obj[arr[i]] = key;
 }
-// for (const key in obj) {
-//     if (Object.hasOwnProperty.call(object, key)) {
-//         const element = object[key];
-        
-//     }
-// }
+
 console.log(obj);
 
