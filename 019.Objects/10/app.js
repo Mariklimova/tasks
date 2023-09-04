@@ -9,7 +9,7 @@ const obj = {
     birthday: null
 }
 for (const key in obj) {
-    if (obj[key] === null) {
+    if (!obj[key]) {
         obj.name = 'Agata';
         obj.age = 10;
         obj.birthday = 11.12;

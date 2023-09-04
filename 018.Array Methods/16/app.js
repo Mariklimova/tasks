@@ -38,7 +38,7 @@
 
 
 function coverTonewArr(arr, rows, n) {
-    // if (isNaN(n) && n > arr.length && n !== (null || undefined)&&typeof n) {
+    // if (isNaN(n) && n > arr.length && n !== (null || undefined)&&typeof n===string) {
 //     console.log('error');
 // } else {
     let newArr = [];
@@ -59,7 +59,7 @@ function coverTonewArr(arr, rows, n) {
     return newArr;
 }
 let oneArr = [1, 2, 3, 4, 5, 6];
-let n = 7;
+let n = prompt();
 let rows = oneArr.length/n;
 let newArr = coverTonewArr(oneArr, rows, n);
 console.log(newArr);
