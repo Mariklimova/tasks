@@ -3,17 +3,17 @@
 
 
 const obj = {
-    id: + prompt(),
-    age: + prompt(),
-    namber: + prompt(),
-    1: + prompt(),
-    text: + prompt()
+    id: prompt(),
+    age: prompt(),
+    namber: prompt(),
+    1: prompt(),
+    text: prompt()
 }
 
 const arr = [];
 
 for (const key in obj) {
-    if (key) {
+    if (!isNaN(obj[key])) {
         arr.push(obj[key]);
     }
 }
