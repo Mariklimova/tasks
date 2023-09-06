@@ -5,10 +5,10 @@ const database = [
     { "id": "java", "label": "Java", "category": "programmingLanguages", "priority": 3 },
     { "id": "go", "label": "GO", "category": "programmingLanguages", "priority": 3 }
 ]
- const id = "javascript";
+const id = "javascript";
 
-let result = database.filter(function(el){
-    if (el.id===id) {
+let result = database.filter(function (el) {
+    if (el.id === id) {
         return true
     }
 })
