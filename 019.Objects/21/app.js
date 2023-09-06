@@ -8,7 +8,7 @@ const database = [
 
 
 // const id = "javascript"
-
+const obj = {"id" : "test" , "label": "Test", "category": "test", "priority": 1 }
 
 // const res = database.filter(function (elem) {
 //     if (elem.id !== id) {

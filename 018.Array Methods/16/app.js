@@ -12,42 +12,24 @@
 
 
 const inputArr = [1, 2, 3, 4, 5, 6];
-const n = 2;
+const n = 5;
 
 const arrWraper = [];
 let arrItem = [];
+if (!n || isNaN(n) || n <= 0 || n > inputArr.length) console.log('error');
+else {
+    for (let i = 0; i < inputArr.length; i++) {
+        arrItem.push(inputArr[i]);
 
-for (let i =0; i<inputArr.length;i++){
-    arrItem.push(inputArr[i])
-    if(arrItem.length===n||)
+        if (arrItem.length === n || (i === inputArr.length - 1 && arrItem.length !== n)) {
+            arrWraper.push(arrItem)
+            arrItem = []
+        }
+    }
+    console.log(arrWraper);
 }
 
 
-// function coverTonewArr(arr, rows, n) {
-//     // if (isNaN(n) && n > arr.length && n !== (null || undefined)&&typeof n===string) {
-// //     console.log('error');
-// // } else {
-//     let newArr = [];
-//     let el = 0;
-//     for (let i = 0; i < rows; i++) {
-//         let row = [];
-//         for (j = 0; j < n; j++) {
-//             if (el < arr.length) {
-//                 row.push(arr[el]);
-//                 el++;
 
-//             }else{
-//                 console.log('error');
-//             }
-//         }
-//         newArr.push(row);
-//     }
-//     return newArr;
-// }
-// let oneArr = [1, 2, 3, 4, 5, 6];
-// let n = prompt();
-// let rows = oneArr.length/n;
-// let newArr = coverTonewArr(oneArr, rows, n);
-// console.log(newArr);
 
 
