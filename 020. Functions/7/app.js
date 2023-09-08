@@ -9,7 +9,7 @@ const arr = [2, 5, 8, 1];
 function checkNumber(arr) {
     let res = arr.every(function (elem) {
         if (!isNaN(elem)) {
-return true
+            return true
         }
 
     })
@@ -19,31 +19,19 @@ return true
 
 function getSum(arr) {
     const check = checkNumber(arr)
-    if (check == true){
-        let res = arr.reduce(function(sum,el){
+    if (check == true) {
+        let res = arr.reduce(function (sum, el) {
             return sum + el
-        },0)
+        }, 0)
         return res
-    } else{
+    } else {
         return 'error';
     }
 
 }
-let res2 = getSum(arr)
+let res2 = getSum(arr);
 console.log(res2);
 
 
 
 
-// function check(arr) {
-
-// }
-// function main(arr) {
-//     const bool = check(arr) 
-//     if (bool) {
-        
-//     } else {
-        
-//     }
-// }
-// main(arr)
