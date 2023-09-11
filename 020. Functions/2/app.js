@@ -9,9 +9,9 @@ const word = prompt().split(' ');
 function changeWord(word) {
     let arr = [];
     for (let i = 0; i < word.length; i++) {
-        if (i % 2 !==0){
+        if (i % 2 !== 0) {
             arr.push(word[i].toUpperCase())
-        }else {
+        } else {
             arr.push(word[i].toLowerCase())
         }
     }

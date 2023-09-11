@@ -3,7 +3,7 @@
 
 const n = 4;
 
-// 2
+// 1
 // function factorial(n) {
 //     let result = 1;
 //     for (let i = 1; i <= n; i++) {

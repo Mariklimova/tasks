@@ -8,9 +8,7 @@ const arr = [45, 10, 23, 12];
 
 function checkNumber(arr) {
     let res = arr.every(function (elem) {
-        if (!isNaN(elem)) {
-            return true
-        }
+        return !isNaN(elem) ? true : false;
     })
     return res
 }
@@ -19,10 +17,9 @@ function doubleNamber(arr) {
     const check = checkNumber(arr)
 
     if (check === true) {
-        let res2 = arr.map(function (el) {
-            return el * 2
-        })
-        return res2
+        return arr.map((el) => el * 2)
+    } else {
+        return 'error'
     }
 }
 let doble = doubleNamber(arr);
