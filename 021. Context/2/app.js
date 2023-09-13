@@ -4,9 +4,10 @@
 
 const textAnalyzer = {
     text: 'Hi',
-getTextLength: function(){
-return
-}
+    getTextLength: function () {
+        return this.text.length;
+    }
 };
 let res = textAnalyzer.getTextLength()
+console.log(res);
 

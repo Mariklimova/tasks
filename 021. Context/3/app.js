@@ -1,27 +1,22 @@
-// 3. Напишите функцию, которая принимает адрес электронной почты и возвращает
-// объект с полями email и active. Поле active должно быть true, если адрес содержит
-// символ '@' и '.com’ / ‘.by', и false в противном случае.
-// {
-// email,
-// active: true / false
-// }
+// 1. Напишите функцию, которая принимает строку из чисел ‘12345’ и возвращает
+// значение в обратном порядке ‘54321’. IIFE
 
-let email = 'mariku22@mail.by';
+const str = '12345';
 
-function getEmail(email) {
-    // return {email:email, active:email.includes('@')&&(email.includes('com'))||email.includes('by')? true:false}
-    if (email.includes('@') && (email.includes('by') || email.includes('com'))) {
-        return {
-            email: email,
-            active: true
-        }
+function isValid(str) {
+    if (!isNaN(str)) {
+        return true
     } else {
-        return {
-            email: email,
-            active: false
-        }
+        return false
     }
-
 }
-let result = getEmail(email);
+
+let result = (function(str){
+    const check = isValid(str)
+    if (check === true) {
+        return str.split('').reverse().join('')
+    } else {
+        return 'error'
+    }
+}(str))
 console.log(result);
