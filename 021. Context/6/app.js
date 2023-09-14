@@ -5,12 +5,14 @@
 const arr = [56, 44, 8, 12, 7];
 
 function isValid(arr) {
-    if (!isNaN(arr)) {
-        return true
-    } else {
-        return false
-    }
-   
+    let res = arr.every(function (elem) {
+        if (!isNaN(elem)) {
+            return true
+        } else {
+            return false
+        }
+    })
+    return res
 }
 
 function findMin(arr) {
