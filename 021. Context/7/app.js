@@ -7,13 +7,16 @@ let str = 'Agata111213'
 
 function checkPassword(str) {
     if (str.length < 8) return 'пороль меньше восьми символов'
+    let number = false;
+    let upper = false;
     for (let i = 0; i < str.length; i++) {
-        if (isNaN(str[i]) && str[i] !== str[i].toUpperCase()) {
-            return 'пороль не надежный'
-        } else {
-            return 'пороль надежный'
+        if (!isNaN(str[i]))
+            number = true
+        if (str[i] === str[i].toUpperCase() && (isNaN(str[i]))) {
+            upper = true
         }
     }
+    return number && upper ? 'пороль надежный' : 'пороль не надежный'
 }
 const res = checkPassword(str);
 console.log(res);
