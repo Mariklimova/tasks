@@ -1,18 +1,18 @@
 // 9. Реализуйте поиск максимального числа статичного массива используя рекурсию
 
-const arr = [2, 12, 56, 100];
-// const arrMax = arr[0]
+const arr = [110, -2, 2, 12, 56, 100, 120];
+let max = arr[0];
 
 
 function getMax(arr) {
-    if (arr.length == 0) return 0
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] > arr[i + 1] && arr[i] > arr[i - 1]) {
-            return arr[i]
-        } else {
-            // return getMax(arr)
+    if (arr.length === 0) return 0
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i]
+            return getMax(arr)
         }
     }
+    return max
 }
 const res = getMax(arr);
 console.log(res);
