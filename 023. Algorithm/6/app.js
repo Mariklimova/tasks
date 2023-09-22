@@ -9,7 +9,7 @@ function findMax(arr) {
     if (arr[0] > num) {
         num = arr[0]
     }
-   findMax(arr.slice(1))
+    findMax(arr.slice(1))
 }
 findMax(arr)
 console.log(num);

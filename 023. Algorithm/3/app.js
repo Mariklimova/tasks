@@ -15,7 +15,7 @@ function checkValidArs(arr1, arr2) {
 
 function twinNnm(arr1, arr2) {
     const checkValid = checkValidArs(arr1, arr2);
-    
+
     const res = arr1.some((el) => arr2.includes(el) ? true : false);
     return res;
 }
