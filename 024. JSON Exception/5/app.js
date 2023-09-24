@@ -6,7 +6,7 @@
 
 const num = 5;
 function getArr(num) {
-     let newArr = [];
+    let newArr = [];
     for (let i = 0; i < num; i++) {
         newArr.push(+prompt())
     }
@@ -15,13 +15,12 @@ function getArr(num) {
 
 function isValid(arr) {
     if (!Array.isArray(arr)) throw new Error('не массив')
-    const check = arr.every(function(el){
+    const check = arr.every(function (el) {
         if (isNaN(el)) return false
         else return true
     })
-    if (!check) throw new Error ('вы ввели не число')
+    if (!check) throw new Error('вы ввели не число')
     return check
-    
 }
 function findRange(arr) {
     try {
