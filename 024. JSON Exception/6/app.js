@@ -8,20 +8,16 @@
 
 const a = 6;
 const b = 3;
-const c = 'n';
+const c = 4;
 
-function isValidNums(a,b,c) {
-    if (isNaN(a) || isNaN(b) || isNaN(c)) throw new Error ('Вы ввели не число')
-    return true
-}
 
 function buildTriangle(a, b, c,) {
     try {
-        isValidNums(a, b, c);
-        if (a < b + c && b < a + c && c < a + b) return true
-        else return false
+        if (isNaN(a) || isNaN(b) || isNaN(c)) throw new Error ('Вы ввели не число')
+        if (a >= b + c || b >= a + c || c >= a + b) throw new Error ('треугольника c такими сторонами не существует')
+        return true
     } catch (error) {
-        return error.messange
+        return error.message
     }
 }
 const res = buildTriangle(a, b, c);

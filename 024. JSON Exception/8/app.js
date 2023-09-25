@@ -15,9 +15,17 @@ function isValid(arr) {
 }
 function getNextLetter(arr) {
     try {
-      for (let i = 0; i < arr.length; i++) {
-           return 
-        }   
+        isValid(arr);
+        let alphabet = 'abcdefgijklmnopqrstuvwxyz';
+        const str = arr.join("");
+        if (str == str.toUpperCase()) {
+            alphabet = alphabet.toUpperCase()
+        }
+        const start = alphabet.indexOf(str[0]);
+        const newAlphabet = alphabet.slice(start, start + str.length + 1)
+        for (let i = 0; i < newAlphabet.length; i++) {
+            if (newAlphabet[i] !== str[i]) return newAlphabet[i]
+        }
     } catch (error) {
         return error.message
     }
