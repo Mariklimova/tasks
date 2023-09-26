@@ -3,7 +3,7 @@
 // ["a","b","c","d","f"] -> "e"
 // ["O","Q","R","S"] -> "P"
 
-const arr = ["a","b","c","d","f"];
+const arr = ["O","Q","R","S"];
 
 function isValid(arr) {
     const check = arr.every(function (el) {
@@ -22,7 +22,7 @@ function getNextLetter(arr) {
             alphabet = alphabet.toUpperCase()
         }
         const start = alphabet.indexOf(str[0]);
-        const newAlphabet = alphabet.slice(start, start + str.length + 1)
+        const newAlphabet = alphabet.slice(start, start + str.length)
         for (let i = 0; i < newAlphabet.length; i++) {
             if (newAlphabet[i] !== str[i]) return newAlphabet[i]
         }
