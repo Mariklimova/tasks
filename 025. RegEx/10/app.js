@@ -15,13 +15,14 @@ const comment = `<body>
 
 function deleteComment(comment) {
     try {
-        if(/\<\!\-\-\ \<[a-z0-9]+\>[\w\ ]+\<\/[a-z0-9]+\> \-\-\>/gm.test(comment)) 
-        return comment.replaceAll(/\<\!\-\-\ \<[a-z0-9]+\>[\w\ ]+\<\/[a-z0-9]+\> \-\-\>/gm, '')
+        let reg = /\<\!\-\-\ \<[a-z0-9]+\>[\w\ ]+\<\/[a-z0-9]+\> \-\-\>/gm;
+        if (reg.test(comment))
+            return comment.replaceAll(reg, '')
         return comment
     } catch (error) {
         return error.message
     }
-    
+
 }
 const res = deleteComment(comment)
 console.log(res);

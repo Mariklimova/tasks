@@ -6,12 +6,12 @@ const str = '-2013';
 
 function checkNums(str) {
    try {
-    if(!/^(\+|\-)[0-9]+$/gm.test(str))throw new Error ('not number')
-    return true
-    
+      if (!/^(\+|\-)[0-9]+$/gm.test(str)) throw new Error('not number')
+      return true
+
    } catch (error) {
-    return error.message
-   } 
+      return error.message
+   }
 }
 const res = checkNums(str);
 console.log(res);

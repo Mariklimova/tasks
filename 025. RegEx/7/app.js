@@ -9,4 +9,16 @@
 // • Специальные символы
 // • Длина не менее 8 символов
 
+const password = 'Agata111213';
 
+function checkPas(password) {
+    try {
+        if (!/^[\w\~\!\@\#\$\%\^\&\*\_\-\+\=\\\<\>\.\/]+$/gm.test(password)) throw new Error('the password is not secure');
+        if (password.length < 8) throw new Error('the password is not secure')
+        return true
+    } catch (error) {
+        return error.message
+    }
+}
+const res = checkPas(password)
+console.log(res);

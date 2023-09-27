@@ -2,13 +2,13 @@
 // пустую строку
 
 const str = 'word1 word2';
- function replaceWords(str) {
+function replaceWords(str) {
     try {
-        if(!/^[a-z0-9]+\ [a-z0-9]+$/gm.test(str)) throw new Error('error')
-        return str.replaceAll(/\s/gm,'')
+        if (!/^[a-z0-9]+\ [a-z0-9]+$/gm.test(str)) throw new Error('error')
+        return str.replaceAll(/\s/gm, '')
     } catch (error) {
         return error.message
     }
- }
- const res = replaceWords(str)
- console.log(res);
+}
+const res = replaceWords(str)
+console.log(res);

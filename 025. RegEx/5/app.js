@@ -6,7 +6,7 @@ const str = 'https://regex101.com';
 
 function isValidUrl(str) {
     try {
-        if (!/^(http|https)\:\/\/[\w]+\.[a-z]{1,5}$/gm.test(str)) throw new Error ('not Valid')
+        if (!/^(http|https)\:\/\/[\w]+\.[a-z]{1,5}$/gm.test(str)) throw new Error('not Valid')
         return true
     } catch (error) {
         return error.message
