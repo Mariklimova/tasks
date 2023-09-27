@@ -7,11 +7,11 @@
 // "12345“ -> false
 // "a234“ -> false
 
-const pin = '123456';
+const pin = '1234';
 
 function checkPIN(pin) {
   try {
-    if(!/^[0-9]{1,4}$/gm.test(pin)||!/^[0-9]{1,6}$/gm) throw new Error('not valid');
+    if (!/[0-9]{4,4}/gm.test(pin) || !/[0-9]{6,6}/gm.test(pin)) throw new Error('false');
     return true
   } catch (error) {
     return error.message
@@ -19,4 +19,3 @@ function checkPIN(pin) {
 }
 const res = checkPIN(pin);
 console.log(res);
-console.log(pin.length);

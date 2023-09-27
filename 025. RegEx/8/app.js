@@ -6,13 +6,13 @@
 const str = 'df78vv-sd_1';
 
 function getLetters(str) {
-    try {
-      let newStr = 
-       if(newStr.length===str) throw new Error('error')
-       return str.
-    } catch (error) {
-       return error.message 
-    }
+   try {
+      let newStr = str.replaceAll(/[\d\-\_]+/gm, '');
+      if (newStr.length === str.length) throw new Error('only letters')
+      return true
+   } catch (error) {
+      return error.message
+   }
 }
 const res = getLetters(str);
 console.log(res);
