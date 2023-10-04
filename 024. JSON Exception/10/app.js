@@ -2,7 +2,7 @@
 // найти в данной почте “@”. Если же есть, то вывести булевое true, в противном
 // случае бросить исключение и его обработать
 
-const str = 'mariku22yandex.ru';
+const str = 'mariku22@yandex.ru';
 
 function isValidStr(str) {
     try {

@@ -9,6 +9,7 @@ const str = `[
     { "id": 4, "label": "Java", "category": "programmingLanguages", "priority": 3 },
     { "id": 5, "label": "GO", "category": "programmingLanguages", "priority": 3 }
     ]`
+
 function isValidArr(str) {
     if (!Array.isArray(str)) throw new Error('Это не массив');
     let res = str.every(el => {
