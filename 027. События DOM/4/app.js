@@ -6,12 +6,12 @@
 let btn = document.querySelector('.btn');
 
 function isValid(inp) {
-    if(!inp.value) throw new Error ('value is empty')
-    if(isNaN(inp.value)) throw new Error ('value is not number');
-    if(inp.value<0) throw new Error ('число отрицательное');
+    if (!inp.value) throw new Error('value is empty')
+    if (isNaN(inp.value)) throw new Error('value is not number');
+    if (inp.value < 0) throw new Error('число отрицательное');
 }
 
-btn.addEventListener('click',()=>{
+btn.addEventListener('click', () => {
     try {
         let inp = document.querySelector('input');
         isValid(inp)

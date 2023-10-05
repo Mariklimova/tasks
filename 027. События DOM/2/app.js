@@ -5,9 +5,9 @@
 const btn = document.querySelector('.btn');
 const inp = document.querySelector('input');
 
-btn.addEventListener('click', function(){
+btn.addEventListener('click', function () {
     try {
-        if(!inp.value) throw new Error ('inp is empty')
+        if (!inp.value) throw new Error('inp is empty')
         inp.value = '+375(29)111-11-11'
     } catch (error) {
         console.log(error.message);
