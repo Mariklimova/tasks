@@ -6,7 +6,7 @@ const ul = document.querySelector('ul');
 const parag = document.querySelector('p');
 
 
-ul.addEventListener('click',(event)=>{
+ul.addEventListener('click', (event) => {
     console.log(event.target);
     parag.textContent = event.target.textContent;
 })

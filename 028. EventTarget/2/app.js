@@ -4,6 +4,6 @@
 
 const div = document.querySelector('div');
 
-div.addEventListener('click', (event)=>{
-    event.target.style = `background-color:#${Math.round(Math.random()*999)}`
+div.addEventListener('click', (event) => {
+    event.target.style = `background-color:#${Math.round(Math.random() * 999)}`
 })

@@ -4,23 +4,32 @@
 const btn = document.querySelector('button');
 const par = document.querySelector('p')
 
-// btn.addEventListener('click', ()=>{
-//     if (par.textContent == 'Показать') {
-//         par.textContent = 'Hi'
-// btn.textContent = 'Скрыть'
-//     }else{
-
-//     }
-// })
-let flag = false;
+// 1
 btn.addEventListener('click', () => {
-    if (flag === false) {
-        par.style = 'visibility: hidden';
+    if (btn.textContent === 'Показать') {
+
+        par.textContent = 'Hi'
         btn.textContent = 'Скрыть'
-        flag = true
+
     } else {
-        par.style = 'visibility: visible';
+        par.textContent = '';
         btn.textContent = 'Показать'
-        flag = false
+
     }
 })
+
+
+
+// 2
+// let flag = false;
+// btn.addEventListener('click', () => {
+//     if (flag === false) {
+//         par.style = 'visibility: hidden';
+//         btn.textContent = 'Скрыть'
+//         flag = true
+//     } else {
+//         par.style = 'visibility: visible';
+//         btn.textContent = 'Показать'
+//         flag = false
+//     }
+// })
