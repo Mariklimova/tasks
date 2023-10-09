@@ -5,12 +5,12 @@ const btn = document.querySelector('.btn');
 const inp = document.querySelector('input');
 
 
-btn.addEventListener('click',()=>{
+btn.addEventListener('click', () => {
     try {
-        if(!inp.value)throw new Error ('')
-        if(inp.value !=='!!!')throw new Error ('')
+        if (!inp.value) throw new Error('value is empty')
+        if (inp.value !== '!!!') throw new Error('the condition is not correct')
         inp.value = '???'
     } catch (error) {
-        alert (error.message)
+        alert(error.message)
     }
 })
