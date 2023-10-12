@@ -3,15 +3,16 @@
 // вернуть соответствующее сообщение.
 
 const obj = {
-    id:1,
-    name_:'Artem',
+    id: 1,
+    name_: 'Artem',
     age: 25
 }
 const str = 'id';
 
-function findStr(obj,str) {
+function findStr(obj, str) {
     let bool = obj.hasOwnProperty(str);
-    if(bool) return true
+    if (bool) return true
+    else throw new Error('error')
 }
-let res = findStr(obj,str);
+let res = findStr(obj, str);
 console.log(res);
