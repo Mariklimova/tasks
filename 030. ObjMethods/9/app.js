@@ -14,12 +14,12 @@ const obj_2 = {
     age: 22,
     role: 'student'
 }
-let newObj = {};
 
 function mergeObjects(obj_1, obj_2) {
-    for (const key in obj_1, obj_2) {
-        if (obj_1.hasOwnProperty(obj_1[key]) !== obj_2.hasOwnProperty(obj_2[key])) {
-            newObj += obj_1[key]
+    let newObj = {};
+    for (const key in obj_1) {
+        if (obj_2.hasOwnProperty(key) && obj_2[key] === (obj_1[key])) {
+            newObj[key] = obj_1[key]
         }
     }
     return newObj
