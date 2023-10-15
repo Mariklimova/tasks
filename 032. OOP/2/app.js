@@ -2,6 +2,9 @@
 // разность, произведение, частное. 2 числа передаются в класс, далее вызываеются
 // соответствующие функции. Добавить проверки на ввод
 
+
+
+// 1
 // class Calculator {
 //     a = 10;
 //     b = 5;
@@ -13,7 +16,7 @@
 //         const res1 = this.a - this.b
 //         return res1
 //     }
-//     getMuilyply = () => {
+//     getMultiply = () => {
 //         const res2 = this.a * this.b
 //         return res2
 //     }
@@ -23,10 +26,10 @@
 //     }
 // }
 // const calculator = new Calculator();
-// console.log(getSum());
-// console.log(getMinus());
-// console.log(getMuilyply());
-// console.log(getDivide());
+// console.log(calculator.getSum());
+// console.log(calculator.getMinus());
+// console.log(calculator.getMultiply());
+// console.log(calculator.getDivide());
 
 
 
@@ -42,7 +45,7 @@
 //         const res1 = this.a - this.b
 //         return res1
 //     }
-//     getMuilyply = () => {
+//     getMultiply = () => {
 //         const res2 = this.a * this.b
 //         return res2
 //     }
@@ -55,11 +58,14 @@
 // calculator.a = 20;
 // calculator.b = 10;
 
-// console.log(getSum());
-// console.log(getMinus());
-// console.log(getMuilyply());
-// console.log(getDivide());
+// console.log(calculator.getSum());
+// console.log(calculator.getMinus());
+// console.log(calculator.getMultiply());
+// console.log(calculator.getDivide());
 
+
+
+// 3
 // class Calculator {
 
 //     getSum = (a,b) => {
@@ -82,9 +88,11 @@
 // const calculator = new Calculator();
 // console.log(calculator.getSum(5,2));
 // console.log(calculator.getMinus(6,9));
-// console.log(calculator.getMuilyply(10,5));
-// console.log(calculator.getDivide(10,5));
+// console.log(calculator.getMuilyply(43,4));
+// console.log(calculator.getDivide(6,3));
 
+
+// 4
 class Calculator {
     MyA;
     MyB;
@@ -100,7 +108,7 @@ class Calculator {
         const res1 = this.a - this.b
         return res1
     }
-    getMuilyply = () => {
+    getMultiply = () => {
         const res2 = this.a * this.b
         return res2
     }
@@ -113,10 +121,10 @@ const calculator = new Calculator();
 calculator.a = 20;
 calculator.b = 10;
 
-console.log(getSum());
-console.log(getMinus());
-console.log(getMuilyply());
-console.log(getDivide());
+console.log(calculator.getSum());
+console.log(calculator.getMinus());
+console.log(calculator.getMultiply());
+console.log(calculator.getDivide());
 
 
 

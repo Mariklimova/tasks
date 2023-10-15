@@ -29,19 +29,30 @@
 // singer.surname = 'Klimova';
 // console.log(singer.getAutograph());
 
+// 3
+// class Singer {
 
+//     name;
+//     surname;
+//     constructor(name, surname) {
+//         this.name = name;
+//         this.surname = surname;
+//     }
+//     getAutograph = () => {
+//         return `${this.name} ${this.surname}`
+//     }
+
+// }
+// const singer = new Singer('Agata', 'Klimova');
+// console.log(singer.getAutograph());
+
+// 4
 class Singer {
 
-    name;
-    surname;
-    constructor(name, surname) {
-        this.name = name;
-        this.surname = surname;
-    }
-    getAutograph = () => {
-        return `${this.name} ${this.surname}`
+    getAutograph = (name,surname) => {
+        return `${name} ${surname}`
     }
 
 }
-const singer = new Singer('Agata', 'Klimova');
-console.log(singer.getAutograph());
+const singer = new Singer();
+console.log(singer.getAutograph('Agata', 'Klimova'));
