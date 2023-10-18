@@ -19,3 +19,39 @@
 // Если совпадение есть – ошибка. Добавить проверки 
 
 
+class ServerPost {
+    controller() {
+        try {
+            const serv = this.service();
+            return serv;
+        } catch (error) {
+            return error.message
+        }
+
+    }
+    service() {
+        const repos = this.repository();
+        return repos;
+    }
+    repository(json) {
+        const arr = [
+            { "id": "javascript", "label": "JavaScript", "category": "programmingLanguages", "priority": 1 },
+            { "id": "typescript", "label": "TypeScript", "category": "programmingLanguages", "priority": 1 },
+            { "id": "sql", "label": "SQL", "category": "programmingLanguages", "priority": 2 },
+            { "id": "java", "label": "Java", "category": "programmingLanguages", "priority": 3 },
+            { "id": "go", "label": "GO", "category": "programmingLanguages", "priority": 3 }
+        ]
+
+        const data = arr.filter((el) => el.label === json.label);
+        if (data.length) {
+            throw new Error('В базе данных уже существует такое значение label')
+        } else {
+            arr.push(json);
+        }
+        return arr
+    }
+}
+
+const serverPost = new ServerPost();
+const json = JSON.parse(`{"label": "JavaScript", "category": "programmingLanguages", "priority": 1}`);
+console.log(serverPost.controller(json));

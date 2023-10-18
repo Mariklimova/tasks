@@ -21,7 +21,7 @@
 
 // 2
 // class Validator {
-   
+
 //     isDate = (date) => {
 //         try {
 //             if (!/^[0-3][\d]\.[0-1][\d]\.[1-2][\d][\d][\d]$/gm.test(date)) throw new Error('not valid data')
@@ -56,14 +56,14 @@
 // 4
 class Validator {
     date = '11.12.2013';
-     isDate = () => {
-         try {
-             if (!/^[0-3][\d]\.[0-1][\d]\.[1-2][\d][\d][\d]$/gm.test(this.date)) throw new Error('not valid data')
-             return true
-         } catch (error) {
-             return error.message
-         }
-     }
- }
- const validator = new Validator();
- console.log(validator.isDate());
+    isDate = () => {
+        try {
+            if (!/^[0-3][\d]\.[0-1][\d]\.[1-2][\d][\d][\d]$/gm.test(this.date)) throw new Error('not valid data')
+            return true
+        } catch (error) {
+            return error.message
+        }
+    }
+}
+const validator = new Validator();
+console.log(validator.isDate());
