@@ -11,13 +11,14 @@ function doObject(n) {
     }
     return obj;
 }
-function numberPairs(obj) {
-    doObject();
+function numberPairs(n) {
+    const data = doObject(n);
+    console.log(data);
     let check = 0;
-    for ( key in obj) {
-        if(obj.key) check++
+    for (key in data) {
+        if (data[key]) check++
     }
     return check
 }
-const res = numberPairs(obj)
+const res = numberPairs(n)
 console.log(res);

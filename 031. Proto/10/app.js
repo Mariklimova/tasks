@@ -9,6 +9,8 @@ const b = 10;
 /*fuhjhygt7tygyggcz*/
 console.log(a+b)`;
 function deleteComment(str) {
-    
+    const res = str.replaceAll(/^\/\*[\w]+\*\/$/gm, '');
+    return res
 }
-const res = deleteComment(str)
+const res = deleteComment(str);
+console.log(deleteComment(str));
