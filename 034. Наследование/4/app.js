@@ -17,7 +17,7 @@ class Figure {
     setA(a) {
         this.a = a;
     }
-    setA(h) {
+    setH(h) {
         this.h = h;
     }
 }
@@ -25,26 +25,47 @@ class Circle extends Figure {
     name = 'circle';
     square;
     setSquare() {
-        this.square = this.p * (this.r ** 2)
+        this.square = this.pi * this.r ** 2;
     }
-    
+    getSquare() {
+        return `${this.name} - ${this.square}`
+    }
+
 }
 class Triangle extends Figure {
     name = 'triangle';
-    triangle;
-    setSquare() {
-        this.square = this.p * (this.r ** 2)
-    }
-}
-class Square extends Figure {
-    name = 'Square';
     square;
     setSquare() {
-        return `${this.name}${this.square}`
+        this.square = 0.5 * this.a * this.h;
+    }
+    getSquare() {
+        return `${this.name} - ${this.square}`
+    }
+
+}
+class Rectangle extends Figure {
+    name = 'rectangle';
+    square;
+    setSquare() {
+        this.square = this.h * this.h;
+    }
+    getSquare() {
+        return `${this.name} - ${this.square}`
     }
 }
 const circle = new Circle();
 circle.setR(5);
+circle.setSquare()
 
 const triangle = new Triangle();
-triangle
+triangle.setA(5);
+triangle.setH(7);
+triangle.setSquare()
+
+const rectangle = new Rectangle();
+rectangle.setH(5);
+rectangle.setSquare();
+
+console.log(circle.getSquare());
+console.log(triangle.getSquare());
+console.log(rectangle.getSquare());
