@@ -20,17 +20,17 @@
 
 
 class ServerPost {
-    controller() {
+    controller(json) {
         try {
-            const serv = this.service();
+            const serv = this.service(json);
             return serv;
         } catch (error) {
             return error.message
         }
 
     }
-    service() {
-        const repos = this.repository();
+    service(json) {
+        const repos = this.repository(json);
         return repos;
     }
     repository(json) {
@@ -46,12 +46,12 @@ class ServerPost {
         if (data.length) {
             throw new Error('В базе данных уже существует такое значение label')
         } else {
-            arr.push(json);
+            arr.push({ id: json.label.toLowerCase(), ...json });
+            return arr
         }
-        return arr
     }
 }
 
 const serverPost = new ServerPost();
-const json = JSON.parse(`{"label": "JavaScript", "category": "programmingLanguages", "priority": 1}`);
+const json = JSON.parse(`{"label": "C#", "category": "programmingLanguages", "priority": 1}`);
 console.log(serverPost.controller(json));

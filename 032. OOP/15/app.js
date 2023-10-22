@@ -24,3 +24,35 @@
 //     ]
 
 
+class ServerDelete {
+    controller(json) {
+        try {
+            const serv = this.service(json);
+            return serv;
+        } catch (error) {
+            return error.message
+        }
+
+    }
+    service(json) {
+        const repos = this.repository(json);
+        return repos;
+    }
+    repository(json) {
+        const arr = [
+            { "id": "javascript", "label": "JavaScript", "category": "programmingLanguages", "priority": 1 },
+            { "id": "typescript", "label": "TypeScript", "category": "programmingLanguages", "priority": 1 },
+            { "id": "sql", "label": "SQL", "category": "programmingLanguages", "priority": 2 },
+            { "id": "java", "label": "Java", "category": "programmingLanguages", "priority": 3 },
+            { "id": "go", "label": "GO", "category": "programmingLanguages", "priority": 3 }
+        ]
+
+        const data = arr.filter((el) => el.id !== json.id);
+        if (data.length === arr.length) throw new Error('В базе данных не существует такое значение id')
+        return data
+    }
+}
+
+const serverDelete = new ServerDelete();
+const json = JSON.parse(`{"id": "javascript"}`);
+console.log(serverDelete.controller(json));

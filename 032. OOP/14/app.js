@@ -17,3 +17,36 @@
 // Если совпадения по id нет – ошибка. Добавить проверки 
 
 
+class ServerPut {
+    controller(json) {
+        try {
+            const serv = this.service(json);
+            return serv;
+        } catch (error) {
+            return error.message
+        }
+
+    }
+    service(json) {
+        const repos = this.repository(json);
+        return repos;
+    }
+    repository(json) {
+        const arr = [
+            { "id": "javascript", "label": "JavaScript", "category": "programmingLanguages", "priority": 1 },
+            { "id": "typescript", "label": "TypeScript", "category": "programmingLanguages", "priority": 1 },
+            { "id": "sql", "label": "SQL", "category": "programmingLanguages", "priority": 2 },
+            { "id": "java", "label": "Java", "category": "programmingLanguages", "priority": 3 },
+            { "id": "go", "label": "GO", "category": "programmingLanguages", "priority": 3 }
+        ]
+
+        const data = arr.filter((el) => el.id !== json.id);
+        if (data.length === arr.length) throw new Error('В базе данных не существует такое значение id')
+        else data.push(json);
+        return data
+    }
+}
+
+const serverPut = new ServerPut();
+const json = JSON.parse(`{"id": "javascript", "label": "JavaScript", "category": "programmingLanguages", "priority": 10 }`);
+console.log(serverPut.controller(json));
