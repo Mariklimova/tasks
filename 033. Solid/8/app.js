@@ -4,3 +4,15 @@
 // успешна.
 
 
+class DomHtml {
+    middleware() {
+        document.querySelector('button').addEventListener('click', () => {
+            const inputValue = document.querySelector('input').value
+            const p = document.querySelector('p');
+            if (/[^d\-]+$/gm.test(inputValue)) p.innerHTML = true;
+            else p.innerHTML = false;
+        })
+    }
+}
+const domHtml = new DomHtml();
+domHtml.middleware()

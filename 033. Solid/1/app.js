@@ -21,16 +21,16 @@ class DomHtml {
         })
     }
     doPlus() {
-        sum.textContent = `Результат суммы:${+inp_1.value + +inp_2.value}`;
+        sum.textContent = `Результат суммы: ${+inp_1.value + +inp_2.value}`;
     }
     doMinus() {
-        minus.textContent = `'Результат разности:${+inp_1.value - +inp_2.value}`;
+        minus.textContent = `Результат разности: ${+inp_1.value - +inp_2.value}`;
     }
     doMultiply() {
-        multiply.textContent = +inp_1.value * +inp_2.value;
+        multiply.textContent = `Результат произведения: ${+inp_1.value * +inp_2.value}`;
     }
     doDivide() {
-        divide.textContent = +inp_1.value / +inp_2.value;
+        divide.textContent = `Результат деления: ${+inp_1.value / +inp_2.value}`;
     }
 }
 const domHtml = new DomHtml();
