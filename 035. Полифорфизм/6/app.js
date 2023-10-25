@@ -5,7 +5,19 @@
 
 
 class Client {
-    sendRequest(){
-
+    sendRequest() {
+        document.querySelector('button').addEventListener('click', () => {
+            const mail = document.querySelector('.email');
+            const pasw = document.querySelector('.password');
+            const res = document.querySelector('p');
+            const obj = {};
+            obj.email = mail.value;
+            obj.pwd = pasw.value;
+            res.innerHTML = JSON.stringify(obj)
+            mail.value = '';
+            pasw.value = '';
+        })
     }
 }
+const client = new Client();
+client.sendRequest()
