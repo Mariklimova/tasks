@@ -20,22 +20,17 @@
 
 
 class Server {
-    middleware(json) {
-        try {
-            if (!json.hasOwnProperty('email')) throw new Error('Invalid');
-            const res = this.controller(json);
-            return res
-
-        } catch (error) {
-            return error.message
-        }
-    }
-    controller(json) {
-        const res = this.service(json);
+    middleware(obj) {
+        if (!obj.hasOwnProperty('email')) throw new Error('Invalid');
+        const res = this.controller(obj);
         return res
     }
-    service(json) {
-        const res = this.repository(json);
+    controller(obj) {
+        const res = this.service(obj);
+        return res
+    }
+    service(obj) {
+        const res = this.repository(obj);
         return res
     }
     repository() {
@@ -46,33 +41,36 @@ class Server {
             { "id": 4, "email": "german@mail.ru", "pwd": "pwdqqq111" },
             { "id": 5, "email": "maria@mail.ru", "pwd": "pwd746552" }
         ];
-        const btn = document.querySelector('button');
-        btn.addEventListener("click", () => {
-            try {
-                const json = JSON.parse(document.querySelector("p").textContent);
-                if (json.email == "" || json.pwd == "") throw new Error("Вы не можeте добавить в базу данных пустой обьект");
-
-                const check = data.some(function (el) {
-                    if (el.email == json.email) return true
-                })
-                if (check) throw new Error('такой email уже есть')
-                data.push({ id: data.length + 1, ...json });
-                return data;
-            } catch (error) {
-                return error.message;
-            }
+        const check = data.some(function (el) {
+            if (el.email == obj.email) return true
         })
-        // const check = data.some(function (el) {
-        //     if (el.email == json.email) return true
-        // })
-        // if (check) throw new Error('такой email уже есть')
-        // data.push({ id: data.length + 1, ...json });
-        // return data;
+        if (check) throw new Error('такой email уже есть')
+        data.push({ id: data.length + 1, ...obj });
+        return data;
     }
 }
-const server = new Server();
-// const json = JSON.parse(`{"email": "mariku22@yandex.ru", "pwd": "Agata111213"}`)
-console.log(server.middleware());
+class Client {
+    constructor() {
+        this.sendRequest()
+    }
+    sendRequest() {
+        try {
+            document.querySelector('button').addEventListener('click', () => {
+                const mail = document.querySelector('.email');
+                const pasw = document.querySelector('.password');
+                const res = document.querySelector('p');
+                const obj = { email: mail, pwd: pasw };
+                const server = new Server()
+                console.log(server.middleware(obj));
+                res.innerHTML = JSON.stringify(obj)
+            })
+        } catch (error) {
+            alert(error.message)
+        }
+    }
+}
+const client = new Client();
+
 
 
 
