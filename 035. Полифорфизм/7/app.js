@@ -18,14 +18,40 @@
 // { "id": 5, "email": "maria@mail.ru", "pwd": "pwd746552" }
 // ]
 
+class Client {
+    constructor() {
+        this.sendRequest()
+    }
+    sendRequest() {
+
+        document.querySelector('button').addEventListener('click', () => {
+            const mail = document.querySelector('.email');
+            const pasw = document.querySelector('.password');
+            const res = document.querySelector('p');
+            const obj = { email: mail.value, pwd: pasw.value };
+            const server = new Server()
+            const resServer = server.controller(obj)
+            console.log(server.middleware(obj));
+            res.innerHTML = JSON.stringify(resServer)
+        })
+
+    }
+}
 
 class Server {
     middleware(obj) {
-        if (!obj.hasOwnProperty('email')) throw new Error('Invalid');
-        const res = this.controller(obj);
-        return res
+        try {
+
+            if (!obj.hasOwnProperty('email')) throw new Error('Invalid');
+            if (!obj.hasOwnProperty('pwd')) throw new Error('Invalid');
+            const res = this.controller(obj);
+            return res
+        } catch (error) {
+            return error.message
+        }
     }
     controller(obj) {
+
         const res = this.service(obj);
         return res
     }
@@ -47,26 +73,6 @@ class Server {
         if (check) throw new Error('такой email уже есть')
         data.push({ id: data.length + 1, ...obj });
         return data;
-    }
-}
-class Client {
-    constructor() {
-        this.sendRequest()
-    }
-    sendRequest() {
-        try {
-            document.querySelector('button').addEventListener('click', () => {
-                const mail = document.querySelector('.email');
-                const pasw = document.querySelector('.password');
-                const res = document.querySelector('p');
-                const obj = { email: mail, pwd: pasw };
-                const server = new Server()
-                console.log(server.middleware(obj));
-                res.innerHTML = JSON.stringify(obj)
-            })
-        } catch (error) {
-            alert(error.message)
-        }
     }
 }
 const client = new Client();
