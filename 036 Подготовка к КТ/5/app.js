@@ -4,10 +4,18 @@
 // удвоенное значение инпута
 
 
-const btn = documeht.querySelector('button');
-const input = documeht.querySelector('input');
-const res= documeht.querySelector('p');
+const btn = document.querySelector('button');
+const input = document.querySelector('input');
+const res = document.querySelector('p');
 
-btn.addEventLister('click',()=>{
-    
+btn.addEventListener('click', () => {
+    try {
+        if (!input.value) throw new Error('value is empty');
+        if (input.value < 0) throw new Error('the number is negative');
+        res.textContent = input.value * 2;
+        input.value = '';
+    } catch (error) {
+        res.innerHTML = error.message
+        input.value = ''
+    }
 })

@@ -3,17 +3,18 @@
 
 
 const btn = document.querySelector('button');
-const input = document.querySelector('input')
+const input = document.querySelector('input');
+const p = document.querySelector('p')
 
 
 btn.addEventListener('click', () => {
     try {
-        if (!input.value) throw
+        if (!input.value) throw new Error('value is empty')
         const arr = [];
         arr.push(input.value);
-        p.innerHTML += arr;
+        p.innerHTML += arr + ',';
         input.value = '';
     } catch (error) {
-        alert(error, message)
+        alert(error.message)
     }
 })

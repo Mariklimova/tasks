@@ -4,23 +4,23 @@
 
 
 const btn = document.querySelector('button');
+const input = document.querySelector('input');
 
 
 function isValid() {
-    if()
+    if (!input.value) throw new Error('value is empty')
 }
 btn.addEventListener('click', () => {
-    const input = document.querySelector('input');
     const value = document.querySelector('.value');
     const duble = document.querySelector('.duble');
     try {
-        isValid(inp);
-        
-      value.innerHTML += input.value;
-      doble.innerHTML = input.value*2;
+        isValid(input);
 
+        value.innerHTML += input.value + ',';
+        duble.innerHTML += input.value * 2 + ',';
         input.value = '';
+
     } catch (error) {
-        alert(error, message)
+        alert(error.message)
     }
 })
