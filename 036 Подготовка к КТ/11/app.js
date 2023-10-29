@@ -2,17 +2,17 @@
 // метод ReverseString(). Ваша задача перевернуть исходную строку
 
 
-class WordString{
+class WordString {
     str;
-    setStr(str){
+    setStr(str) {
         this.str = str
     }
-    getStr(){
+    getStr() {
         return this.str
     }
-    ReverseString(){
-       return this.str.split('').reverse().join('')
-       
+    ReverseString() {
+        return this.str.split('').reverse().join('')
+
     }
 }
 const wordString = new WordString('stroka');
