@@ -6,3 +6,23 @@
 // произведение всех элементов массива используя reduce
 
 
+class NumberArray {
+    multArr() {
+        const arr = [];
+        for (let i = 0; i < 5; i++) {
+            arr.push(Math.floor(Math.random() * 100));
+        }
+        return arr
+    }
+}
+
+class ConsoleArray extends NumberArray {
+    multArr() {
+        let res = super.multArr();
+        res.reduce(function (multyplay, el) {
+            return multyplay *= el;
+        }, 0)
+    }
+}
+const consoleArray = new ConsoleArray();
+console.log(consoleArray.multArr());

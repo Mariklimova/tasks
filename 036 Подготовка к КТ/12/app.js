@@ -4,3 +4,21 @@
 // Вызвать из экземпляра класса методы setEmail. getEmail, isEmail
 
 
+class Validator {
+    setEmail(mail) {
+        this.mail = mail;
+    }
+    getEmail() {
+        return this.mail
+    }
+    isEmail() {
+        if (/^[\w]+\@[a-z]+\.[a-z]{1,5}/gm.test(this.mail)) {
+            return true
+        } else {
+            return false
+        }
+    }
+}
+const validator = new Validator()
+validator.mail = 'mariku22@yandex.ru';
+console.log(validator.isEmail());
