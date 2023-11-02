@@ -31,7 +31,7 @@ class Client {
             const obj = { email: mail.value, pwd: pasw.value };
             const server = new Server()
             const resServer = server.controller(obj)
-            console.log(server.middleware(obj));
+            // console.log(server.middleware(obj));
             res.innerHTML = JSON.stringify(resServer)
         })
 
@@ -59,7 +59,7 @@ class Server {
         const res = this.repository(obj);
         return res
     }
-    repository() {
+    repository(obj) {
         const data = [
             { "id": 1, "email": "yesenia@mail.ru", "pwd": "pwd12345678" },
             { "id": 2, "email": "hanna@mail.ru", "pwd": "pwd123123" },
