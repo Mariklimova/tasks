@@ -31,7 +31,6 @@ class Client {
             const obj = { email: mail.value, pwd: pasw.value };
             const server = new Server()
             const resServer = server.controller(obj)
-            // console.log(server.middleware(obj));
             res.innerHTML = JSON.stringify(resServer)
         })
 
@@ -85,18 +84,3 @@ const client = new Client();
 
 
 
-// document.querySelector('button').addEventListener("click", () => {
-//     try {
-//         const json = JSON.parse(document.querySelector("p").textContent);
-//         if (json.email == "" || json.pwd == "") throw new Error("Вы не можeте добавить в базу данных пустой обьект");
-
-//         const check = data.some(function (el) {
-//             if (el.email == json.email) return true
-//         })
-//         if (check) throw new Error('такой email уже есть')
-//         data.push({ id: data.length + 1, ...json });
-//         return data;
-//     } catch (error) {
-//         alert(error.message);
-//     }
-// })
