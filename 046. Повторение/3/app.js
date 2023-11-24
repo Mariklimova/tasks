@@ -6,7 +6,17 @@
 // • По клику с текстом на кнопку -1 необходимо отнять из счетчика -1. 
 
 class HTML {
-    bindOption() {
+    bindOptionPlus() {
+        const btn_minus = document.querySelector('.minus')
+        const div = document.querySelector('div')
+        // const inp = document.querySelector('input')
+
+        btn_minus.addEventListener('click', () => {
+            div.innerHTML++;
+            inp.value = '';
+        })
+    }
+    bindOptionMinus() {
         const btn_minus = document.querySelector('.minus')
         const div = document.querySelector('div')
         // const inp = document.querySelector('input')
@@ -16,9 +26,7 @@ class HTML {
             inp.value = '';
         })
 
-    
     }
-
 }
 const html = new HTML()
 html.bindOption();
