@@ -9,15 +9,14 @@ class HTML {
     bindOptionPlus() {
         const btn_minus = document.querySelector('.minus')
         const div = document.querySelector('div')
-        // const inp = document.querySelector('input')
-
         btn_minus.addEventListener('click', () => {
             div.innerHTML++;
             inp.value = '';
         })
     }
+
     bindOptionMinus() {
-        const btn_minus = document.querySelector('.minus')
+        const btn_plus = document.querySelector('.plus');
         const div = document.querySelector('div')
         // const inp = document.querySelector('input')
 
