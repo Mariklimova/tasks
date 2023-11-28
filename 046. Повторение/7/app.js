@@ -33,12 +33,19 @@ class Server {
         try {
             const serv = this.service(clientData);
             return serv
-            
+
         } catch (error) {
             return error.message
         }
     }
     service(clientData) {
+
+        const step = 3;
+        const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+        const oldPwdClient = clientData.pwd;
+
+        const hashPwd = '';
+
         const rep = this.repository(clientData);
         return rep
     }
@@ -50,8 +57,8 @@ class Server {
             { "id": 4, "email": "german@mail.ru", "pwd": "pwdqqq" },
             { "id": 5, "email": "maria@mail.ru", "pwd": "pwdfcel" }
         ];
-        const check = data.filter(el =>el.email === clientData.email);
-        if(check.length) throw new Error('already exists')
+        const check = data.filter(el => el.email === clientData.email);
+        if (check.length) throw new Error('already exists')
         data.push({ id: data.length + 1, ...clientData });
         return data;
     }

@@ -7,25 +7,22 @@
 
 class HTML {
     bindOptionPlus() {
-        const btn_minus = document.querySelector('.minus')
+        const btn_plus = document.querySelector('.plus')
         const div = document.querySelector('div')
-        btn_minus.addEventListener('click', () => {
+        btn_plus.addEventListener('click', () => {
             div.innerHTML++;
-            inp.value = '';
         })
     }
 
     bindOptionMinus() {
-        const btn_plus = document.querySelector('.plus');
+        const btn_minus = document.querySelector('.minus');
         const div = document.querySelector('div')
-        // const inp = document.querySelector('input')
-
         btn_minus.addEventListener('click', () => {
-            div.innerHTML++;
-            inp.value = '';
+            div.innerHTML--;
         })
 
     }
 }
-const html = new HTML()
-html.bindOption();
+const html = new HTML();
+html.bindOptionMinus();
+html.bindOptionPlus();

@@ -4,24 +4,15 @@
 // текст кнопки – 0, то после пятого, например, клика значение button – 5)
 
 class HTML {
-    bindOption(){
-        const btn = document.querySelector('button')
-        const div = document.querySelector('div')
-        const inp = document.querySelector('input')
+    bindOption() {
+        const btn = document.querySelector('button');
+        let count = 0;
 
-        btn.addEventListener('click',()=>{
-            try {
-                if(!inp.value.trim()) throw new Error ('value is empty')
-                div.innerHTML = inp.value;
-                div.style = 'color:black';
-                inp.value = '';
-            } catch (error) {
-               div.innerHTML = error.message;
-               div.style = 'color:red';
-            }
+        btn.addEventListener('click', () => {
+            count++
+            btn.innerHTML = count;
         })
     }
-    
 }
-const html = new HTML()
+const html = new HTML();
 html.bindOption();
