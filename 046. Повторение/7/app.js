@@ -41,11 +41,26 @@ class Server {
     service(clientData) {
 
         const step = 3;
-        const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+        const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
         const oldPwdClient = clientData.pwd;
 
-        const hashPwd = '';
+        const hashPwd = [];
+        for (let i = 0; i < oldPwdClient.length; i++) {
+            for (let j = 0; j < alphabet.length; j++) {
+                if (oldPwdClient[i] == alphabet[i]) {
+                    if (j + step >= alphabet.length) {
+                        let sum = j + step - alphabet.length;
+                        hashPwd.push(alphabet[sum])
+                    } else {
+                        hashPwd.push(alphabet[j + step]);
+                    }
 
+                }
+
+            }
+
+        }
+        console.log(hashPwd);
         const rep = this.repository(clientData);
         return rep
     }
