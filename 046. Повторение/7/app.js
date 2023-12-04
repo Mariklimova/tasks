@@ -42,13 +42,13 @@ class Server {
 
         const step = 3;
         const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
-        const oldPwdClient = clientData.pwd;
-
+        const oldPwdClient = clientData.pwd.toLowerCase();
         const hashPwd = [];
+
         for (let i = 0; i < oldPwdClient.length; i++) {
             for (let j = 0; j < alphabet.length; j++) {
                 if (oldPwdClient[i] == alphabet[i]) {
-                    if (j + step >= alphabet.length) {
+                    if ((j + step) >= alphabet.length) {
                         let sum = j + step - alphabet.length;
                         hashPwd.push(alphabet[sum])
                     } else {
