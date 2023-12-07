@@ -29,11 +29,16 @@ app.get('/:id', (req, res) => {
             resArr.push(itemArr);
             itemArr = [];
         }
+
+        if (i===arr.length-1 && itemArr.length>0) {
+            resArr.push(itemArr)
+        }
     }
     res.send(resArr);
 })
 
 app.get('/task/:id', (req, res) => {
+    const { id } = req.params;
     const arr = [
         { "id": 1, "name": "Yesenia", "age": 22 },
         { "id": 2, "name": "Hanna", "age": 22 },
@@ -41,11 +46,11 @@ app.get('/task/:id', (req, res) => {
         { "id": 4, "name": "German", "age": 18 },
         { "id": 5, "name": "Maria", "age": 27 }
     ]
-    const result = arr.filter((el)=>el.id==id);
+    const result = arr.filter((el) => el.id == id);
     res.send(result)
 })
 
-app.listen(3000, () => {
+app.listen(5000, () => {
     console.log('Server is running');
 })
 
