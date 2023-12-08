@@ -45,22 +45,47 @@ class Server {
         const oldPwdClient = clientData.pwd.toLowerCase();
         const hashPwd = [];
 
-        for (let i = 0; i < oldPwdClient.length; i++) {
-            for (let j = 0; j < alphabet.length; j++) {
-                if (oldPwdClient[i] == alphabet[i]) {
-                    if ((j + step) >= alphabet.length) {
-                        let sum = j + step - alphabet.length;
-                        hashPwd.push(alphabet[sum])
-                    } else {
-                        hashPwd.push(alphabet[j + step]);
-                    }
-
+        function shifr(clientData, step) {
+            for (let i = 0; i < clientData.length; i++) {
+                let include = alphabet.includes(clientData[i].toLowerCase());
+                // console.log(clientData[i].toLowerCase());
+                if (include) {
+                    let position = alphabet.indexOf(clientData[i].toLowerCase());
+                    let newPosition = (position + step) % alphabet.length;
+                    console.log(alphabet[newPosition]);
+                    hashPwd.push(alphabet[newPosition])
                 }
-
             }
+            // if ((position + step) >= alphabet.length) {
+            //     let sum = position + step - alphabet.length;
+            //     return hashPwd.push(alphabet[sum])
+            // } else {
+            //     return hashPwd.push(alphabet[position + step]);
+            // }
+
+            // } else return clientData;
 
         }
-        console.log(hashPwd);
+        const res = shifr(clientData, step);
+        console.log(res);
+
+
+        // for (let i = 0; i < oldPwdClient.length; i++) {
+        //     for (let j = 0; j < alphabet.length; j++) {
+        //         if (oldPwdClient[i] == alphabet[i]) {
+        //             if ((j + step) >= alphabet.length) {
+        //                 let sum = j + step - alphabet.length;
+        //                 hashPwd.push(alphabet[sum])
+        //             } else {
+        //                 hashPwd.push(alphabet[j + step]);
+        //             }
+
+        //         }
+
+        //     }
+
+        // }
+        // console.log(hashPwd);
         const rep = this.repository(clientData);
         return rep
     }
