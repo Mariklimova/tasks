@@ -51,20 +51,21 @@ function deleteElementById(id) {
 }
 
 function createEntryById(label, category, priority) {
-
-  const createEntry = {
-    id: label.toLowerCase(),
-    label: label,
-    category: category,
-    priority: priority
-  };
-
-  if (json.id == label.toLowerCase()) {
+  const filt = json.filter(el => el.id == label.toLowerCase());
+  if (filt.length) {
     throw new Error('this id already exists')
+  } else {
+    const createEntry = {
+      id: label.toLowerCase(),
+      label: label,
+      category: category,
+      priority: priority
+    };
+    json.push(createEntry);
+    return json;
+
   }
-  
-  json.push(createEntry);
-  return json;
+
 }
 
 module.exports = { getAllData, getId, updateDatabyTd, deleteElementById, createEntryById }
