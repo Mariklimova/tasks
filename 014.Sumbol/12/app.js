@@ -6,11 +6,7 @@ let str = '5';
 
 
 if (!isNaN(str)) {
-    if ((str > 2 && str < 11) || (str >= 26 && str < 30)) {
-        console.log('Верно');
-    } else {
-        console.log('Неверно');
-    }
+    console.log(((str > 2 && str < 11) || (str >= 26 && str < 30)) ? 'Верно' : 'Неверно');
 } else {
     console.log('error');
-}
+};
