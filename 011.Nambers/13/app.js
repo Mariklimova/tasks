@@ -4,10 +4,6 @@
 
 let a = +prompt('введите значение');
 
-if (a < 0 && a != 0) {
-    console.log('Отрицательное');
-} else if (a > 0 && a != 0) {
-    console.log('Положительное');
-} else if (a == 0) {
-    console.log('Ноль');
-}
+if (a < 0 && a != 0)  console.log('Отрицательное');
+else if (a > 0 && a != 0) console.log('Положительное');
+else if (a == 0) console.log('Ноль');

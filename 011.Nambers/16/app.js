@@ -2,8 +2,8 @@
 // же результат – число с плавающей точкой, то округлить до 2 знаков после запятой).
 
 
-let a = +prompt('введите число');
-let sq = Math.sqrt(a);
+const a = +prompt('введите число');
+const sq = Math.sqrt(a);
 
 
 // 1
@@ -15,3 +15,11 @@ if ((sq % 1) == 0) {
 
 // 2
 (sq % 1) == 0 ? console.log(sq.toFixed(0)) : console.log(sq.toFixed(2));
+
+// 3
+if ((sq % 1) == 0) console.log(sq.toFixed(0));
+else console.log(sq.toFixed(2));
+
+// 4
+console.log(sq % 1 == 0 ? sq.toFixed(0) : sq.toFixed(2));
+
