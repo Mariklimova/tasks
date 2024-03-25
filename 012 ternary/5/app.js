@@ -23,5 +23,16 @@ if (isNaN(x)) {
     else console.log('число отрицательное', x);
 }
 
+// 3
+if (!isNaN(x) && x >= 0) {
+    console.log('число положительное', x);
+} else if (!isNaN(x) && x < 0) {
+    console.log('число отрицательное', x);
+} else {
+    console.log('error');
+}
+
+
+
 
 

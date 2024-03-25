@@ -3,8 +3,9 @@
 // 345 -> 3
 // 100 -> 1
 
-let cm = prompt('введите число в сантиметрах');
+const cm = prompt('введите число в сантиметрах');
 
+// 1
 if (!isNaN(cm)) {
     if (cm > 0) {
         console.log(Math.round(cm / 100));
@@ -13,6 +14,22 @@ if (!isNaN(cm)) {
     }
 } else {
     console.log('Вы ввели не число');
-}
+};
+
+
+// 2
+if (!isNaN(cm)) {
+    (cm > 0) ? console.log(Math.round(cm / 100)) : console.log('error');
+} else {
+    console.log('Вы ввели не число');
+};
+
+
+// 3
+if (!isNaN(cm)) {
+    console.log(cm > 0 ? Math.round(cm / 100) : 'error');
+} else {
+    console.log('Вы ввели не число');
+};
 
 

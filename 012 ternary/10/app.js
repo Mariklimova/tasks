@@ -4,8 +4,9 @@
 //     чисел
 
 
-let x = prompt('введите число');
+const x = prompt('введите число');
 
+// 1
 if (!isNaN(x)) {
     if (x != 0) {
         console.log(1 / x);
@@ -16,3 +17,17 @@ if (!isNaN(x)) {
     console.log('ВЫ ввели не число');
 }
 
+
+// 2
+if (!isNaN(x)) {
+    (x != 0) ? console.log(1 / x) : console.log('Обратного числа не существует');
+} else {
+    console.log('ВЫ ввели не число');
+}
+
+// 3
+if (!isNaN(x)) {
+    console.log(x != 0 ? (1 / x) : 'Обратного числа не существует');
+} else {
+    console.log('ВЫ ввели не число');
+}

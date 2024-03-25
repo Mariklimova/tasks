@@ -26,4 +26,13 @@ if (isNaN(num)) {
 
 
 // 3
+if (isNaN(num)) console.log('некорректный ввод');
+else Number.isInteger(Math.sqrt(num))? console.log(Math.sqrt(num)):console.log(Math.round(Math.sqrt(num)));
+
+
+// 4
 (isNaN(num))?console.log('некорректный ввод'): console.log(Number.isInteger(Math.sqrt(num))? Math.sqrt(num):Math.round(Math.sqrt(num)));
+
+
+// 5
+console.log(isNaN(num)?'некорректный ввод': (Number.isInteger(Math.sqrt(num))? Math.sqrt(num):Math.round(Math.sqrt(num))));

@@ -5,7 +5,7 @@
 // hsChOoL -> h-s-c-h-o-o-l
 
 
-let str = 'hsChOoL'.toLowerCase();
+const str = 'hsChOoL'.toLowerCase();
 
 
 // 1

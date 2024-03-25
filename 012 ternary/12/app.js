@@ -4,6 +4,8 @@
 
 let str = prompt('введите текст').trim();
 
+
+// 1
 if (isNaN(str)) {
     if (str === 'hschool') {
         console.log(true);
@@ -12,4 +14,20 @@ if (isNaN(str)) {
     }
 } else {
     console.log('некорректный ввод');
-}
+};
+
+
+// 2
+if (isNaN(str)) {
+    (str === 'hschool') ? console.log(true) : console.log(false);
+} else {
+    console.log('некорректный ввод');
+};
+
+
+// 3
+if (isNaN(str)) {
+    console.log(str === 'hschool' ? true : false);
+} else {
+    console.log('некорректный ввод');
+};
