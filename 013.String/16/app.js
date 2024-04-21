@@ -13,3 +13,11 @@ if (str[0][0] === str[0][0].toUpperCase() && str[1][0] === str[1][0].toUpperCase
 } else {
     console.log(false);
 }
+
+// 2
+if (str[0][0] === str[0][0].toUpperCase() && str[1][0] === str[1][0].toUpperCase()) console.log(true);
+else console.log(false);
+
+
+// 3
+console.log(str[0][0] === str[0][0].toUpperCase() && str[1][0] === str[1][0].toUpperCase() ? true : false);

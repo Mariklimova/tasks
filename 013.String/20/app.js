@@ -9,3 +9,15 @@ for (let i = 0; i < str.length; i++) {
     }
 }
 console.log(sum);
+
+
+// 2
+const string = prompt('введите текст');
+const vovels = ['a','u','i','o','e','y']
+let sum_2 = 0;
+for (let i = 0; i < vovels.length; i++) {
+    if (string.includes(vovels[i])) {
+        sum_2 += 1
+    }
+}
+console.log(sum);

@@ -14,3 +14,11 @@ if (isNaN(str)) {
 
 // 2
 isNaN(str) ? console.log(str.repeat(3)) : console.log('error');
+
+// 3
+if (isNaN(str)) console.log(str.repeat(3));
+else console.log('error');
+
+
+// 4
+console.log(isNaN(str) ? str.repeat(3) : 'error');

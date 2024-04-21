@@ -5,7 +5,7 @@
 
 const str = prompt();
 
-
+// 1
 if (isNaN(str)) {
     if (str.includes('.com') || str.includes('.ru')) {
         console.log(true);
@@ -15,3 +15,8 @@ if (isNaN(str)) {
 } else {
     console.log('error');
 }
+
+
+// 2
+if (isNaN(str)) console.log(str.includes('.com') || str.includes('.ru') ? true : false) 
+else console.log('error');

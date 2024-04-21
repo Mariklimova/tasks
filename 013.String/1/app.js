@@ -35,3 +35,8 @@ if (isNaN(str)) {
     console.log(str % 2 === 0 ? 'четное' : 'нечетное');
 }
 
+
+// 4
+if (isNaN(str)) console.log(str.split(''));
+else console.log(str % 2 === 0 ? 'четное' : 'нечетное');
+
