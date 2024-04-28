@@ -4,6 +4,7 @@
 
 let str = '123@1@@34'
 
+// 1
 let result = '';
 
 for (let i = 0; i < str.length; i++) {
@@ -12,4 +13,9 @@ for (let i = 0; i < str.length; i++) {
     }
 }
 console.log(result);
+
+// 2
 console.log(str.replaceAll('@', ''));
+
+// 3
+console.log(str.split('@').join(''));

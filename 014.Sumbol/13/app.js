@@ -3,9 +3,22 @@
 // 53 -> 8
 // 135 -> 9
 
-let str = '135'
+const str = '135'
 let result = 0
 for (let i = 0; i < 3; i++) {
     result += +str[i];
 }
 console.log(result);
+
+
+// 2
+// for (const el of str) {
+//     result += +el
+// }
+// console.log(result);
+
+
+
+
+
+

@@ -4,3 +4,8 @@
 let str = 'kgmj dfgkkd fbdfb'.replaceAll(' ', '-');
 
 console.log(str);
+
+// 2
+const str2 = 'kgmj dfgkkd fbdfb'.split(' ').join('-');
+
+console.log(str2);

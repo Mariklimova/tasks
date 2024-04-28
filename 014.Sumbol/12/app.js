@@ -4,9 +4,18 @@
 
 let str = '5';
 
-
+// 1
 if (!isNaN(str)) {
     console.log(((str > 2 && str < 11) || (str >= 26 && str < 30)) ? 'Верно' : 'Неверно');
 } else {
     console.log('error');
 };
+
+
+// 2
+if (!isNaN(str)) console.log(((str > 2 && str < 11) || (str >= 26 && str < 30)) ? 'Верно' : 'Неверно');
+else console.log('error');
+
+
+
+
