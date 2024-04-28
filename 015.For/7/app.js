@@ -17,3 +17,11 @@ for (let i = 0; i < str.length; i++) {
 }
 console.log(res);
 
+
+// 3
+let res3 = '';
+for (let i = 0; i < str.length; i++) {
+    (i === 0) ? res3 += str[i].toUpperCase() : res3 += str[i];
+}
+console.log(res3);
+

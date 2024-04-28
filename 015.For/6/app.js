@@ -3,5 +3,5 @@
 
 
 for (let i = 1; i <= 100; i++) {
-    console.log(Math.ceil(Math.random() * 100))
+    console.log(Math.ceil(Math.random() * 100));
 }

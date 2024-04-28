@@ -2,7 +2,8 @@
 // проверку вводимого значения, если это текст –> сообщение об ошибке
 
 
-let num = 22;
+const num = 22;
+
 if (!isNaN(num)) {
     for (let i = 1; i <= num; i++) {
         console.log(i);

@@ -2,11 +2,20 @@
 // элементов этого массива
 
 
-let arr = [2, 3, 4, 5];
+const arr = [2, 3, 4, 5];
 let res = arr[0];
 
+// 1
 for (i = 1; i < arr.length; i++) {
     res *= arr[i];
-    console.log(res);
+   
 }
 console.log(res);
+
+
+// 2
+let res2 = 1;
+for (const el of arr) {
+    res2 *= el;
+}
+console.log(res2);

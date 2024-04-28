@@ -7,6 +7,8 @@
 
 let num = '1234';
 let res = '';
+
+// 1
 for (let i = 0; i < num.length; i++) {
     if (num[i] % 2 === 0) {
         res += num[i] + ' чет ';
@@ -15,5 +17,13 @@ for (let i = 0; i < num.length; i++) {
     }
 }
 console.log(res);
+
+
+// 2
+let res_2 = '';
+for (const el of num) {
+    el % 2 === 0 ? res_2 += el + ' чет ' : res_2 += el + ' неч ';
+}
+console.log(res_2);
 
 

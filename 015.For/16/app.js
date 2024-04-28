@@ -6,9 +6,18 @@
 let arr = [1, 2, 5, 9, 4, 13, 4, 10];
 res = 0;
 
+// 1
 for (let i = 0; i < arr.length; i++) {
     if (arr[i] === 4) {
         res += 1;
     }
 }
 console.log(res);
+
+
+// 2
+let res_2 = 0;
+for (const el of arr) {
+    el === 4 ? res_2++ : res_2 += 0
+}
+console.log(res_2);

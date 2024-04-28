@@ -2,10 +2,20 @@
 // всех элементов массива
 
 
-let mas = [1, 2, 3, 4, 5, 6];
+const arr = [1, 2, 3, 4, 5, 6];
 let res = 1;
 
-for (i = 0; i < mas.length; i++) {
-    res *= mas[i]
+
+// 1
+for (i = 0; i < arr.length; i++) {
+    res *= arr[i]
 }
 console.log(res);
+
+
+// 2
+let res2 = 1
+for (const el of arr) {
+    res2 *= el
+}
+console.log(res2);
