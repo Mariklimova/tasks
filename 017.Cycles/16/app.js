@@ -6,3 +6,5 @@ for (let i = 7; i <= 100; i++) {
         console.log(i);
     }
 }
+
+

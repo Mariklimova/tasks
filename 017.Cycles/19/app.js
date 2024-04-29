@@ -2,13 +2,13 @@
 // массива. Напишите код заполнения массива методом prompt. Проверить каждый
 // prompt на число (ввод строки, проверка на isNaN)
 
-let num = +prompt('введите количество элементов массива');
-let res = [];
+const num = +prompt('введите количество элементов массива');
+const res = [];
 
 for (let i = 0; i < num; i++) {
-    let pr = prompt('введите элемент массива')
-    if (isNaN(pr)) {
-        res.push(pr)
+    const el = prompt('введите элемент массива')
+    if (isNaN(el)) {
+        res.push(el)
     }
 }
 console.log(res);

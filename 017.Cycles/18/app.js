@@ -2,10 +2,11 @@
 // массива. Напишите код заполнения массива методом prompt. 
 
 
-let num = +prompt('введите количество эл массива');
+const num = +prompt('введите количество эл массива');
 const res = [];
+
 for (let i = 0; i < num; i++) {
-    let pr = prompt('введите элемент массива');
-    res.push(pr);
+   const elem = prompt('введите элемент массива');
+    res.push(elem);
 }
 console.log(res);

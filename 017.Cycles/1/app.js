@@ -11,3 +11,11 @@ while (i < 51) {
     console.log(i);
     i++
 }
+
+
+// 3
+let j =1;
+do {
+    console.log(j);
+    j++
+} while (j < 51);
