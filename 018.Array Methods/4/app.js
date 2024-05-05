@@ -2,24 +2,20 @@
 // равна 5. Вывести массив в консоль (цикл for, while)
 
 
-let arr = [];
 
 // 1
+const arr = [];
 for (; ;) {
-    arr.push(prompt())
-    if (arr.length === 5) {
-        break
-    }
+    arr.push(prompt('введите знаения массива 1'))
+    if (arr.length === 5) break
 }
 console.log(arr);
 
 // 2
-let arr2 = [];
+const arr_2 = [];
 while (true) {
-    arr2.push(prompt())
-    if (arr2.length === 5) {
-        break
-    }
+    arr_2.push(prompt('введите значения массива 2'))
+    if (arr_2.length === 5) break
 }
-console.log(arr2);
+console.log(arr_2);
 

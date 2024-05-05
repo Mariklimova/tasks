@@ -5,17 +5,19 @@
 // только чисел после каждого введенного элемента. forEach
 
 
-let num = 5;
-let a = prompt('введите 6');
-let b = prompt('введите 7');
-let arr = [];
+const num = 5;
+const a = prompt('введите 6');
+const b = prompt('введите 7');
+const arr = [];
 
 
 for (let i = 0; i < num; i++) {
     arr.push(prompt('введите значение массива'))
 }
 
-let res = arr.filter(function (elem) {
+
+// 1
+const res = arr.filter(function (elem) {
     if (!isNaN(elem) && elem != a && elem != b) {
         return true
     } else {
@@ -28,3 +30,25 @@ if (res.length === 0) {
 } else {
     console.log(res);
 }
+
+
+// 2
+const result = arr.filter((elem) => !isNaN(elem) && elem != a && elem != b)
+console.log(result.length === 0 ? 'Массив пуст' : result);
+
+
+// 3
+const newArr = [];
+arr.forEach(elem => {
+    if (!isNaN(elem) && elem != a && elem != b) {
+        newArr.push(elem)
+    } else if (arr.length === 0) {
+        console.log('Массив пуст');
+    }
+
+});
+console.log(newArr.length === 0 ? 'Массив пуст' : newArr);
+
+
+// 4
+console.log(arr.filter((elem) => !isNaN(elem) && elem != a && elem != b).length === 0 ? 'Массив пуст' : result);

@@ -2,23 +2,39 @@
 // необходимо сравнить массивы. Если они идентичны, то вывести булевое true, в
 // противном случае false
 
-let arr1 = [];
-let arr2 = [];
+const arr_1 = [];
+const arr_2 = [];
 
-for (let i = 0; i < 5; i++) {
-    arr1.push(prompt('введите значения массива 1'));
+// 1
+// for (let i = 0; i < 5; i++) {
+//     arr_1.push(prompt('введите значения массива 1'));
+// }
+
+// for (let i = 0; i < 5; i++) {
+//     arr_2.push(prompt('введите значения массива 2'));
+// }
+
+// str_1 = arr_1.join('');
+// str_2 = arr_2.join('');
+
+// if (str_1 === str_2) {
+//     console.log(true);
+// } else {
+//     console.log(false);
+// }
+
+
+// 2
+for (let i = 0; i < 10; i++) {
+    i < 5 ? arr_1.push(prompt('введите значения массива 1')) : arr_2.push(prompt('введите значения массива 2'));
 }
+console.log(arr_1.join('') === arr_2.join('')) ? true : false;
 
-for (let i = 0; i < 5; i++) {
-    arr2.push(prompt('введите значения массива 2'));
-}
 
-str1 = arr1.join('');
-str2 = arr2.join('');
+// 3
+console.log(arr_1.toString() === arr_2.toString()) ? true : false;
 
-if (str1 === str2) {
-    console.log(true);
-} else {
-    console.log(false);
-}
 
+// 4
+const res = arr_1.every((el,index)=>el===arr_2[index]);
+console.log(res);

@@ -3,14 +3,16 @@
 // массива равна 0, то вывести ‘Массив пуст’. filter
 
 
-let num = 5;
+const num = 5;
 const arr = [];
 
 for (let i = 0; i < 5; i++) {
     arr.push(prompt('введите элемент массива'));
 
 }
-let res = arr.filter(function (elem) {
+
+// 1
+const res = arr.filter(function (elem) {
     if (!isNaN(elem)) {
         return true
     } else {
@@ -23,3 +25,13 @@ if (res.length > 0) {
 } else {
     console.log('Массив пуст');
 }
+
+
+// 2
+const result = arr.filter((el)=>!isNaN(el))
+console.log(result.length > 0? result:'Массив пуст');
+
+
+// 3
+
+console.log(arr.filter((el)=>!isNaN(el)).length > 0? result:'Массив пуст');

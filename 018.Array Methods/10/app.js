@@ -6,22 +6,26 @@
 // Использовать map
 
 
-let n = 5;
-let arr = [];
+const n = 5;
+const arr = [];
 
 for (let i = 0; i < n; i++) {
     arr.push(prompt());
 }
 
-let res = arr.map(function (el) {
+
+// 1
+const res = arr.map(function (el) {
     if (el % 2 === 0) {
         return 'чет';
     } else {
         return 'нечет';
     }
 })
+console.log(res);
 
-let nArr = [];
+
+const nArr = [];
 arr.forEach(function (el) {
     if (el % 2 === 0) {
         nArr.push('чет');
@@ -30,3 +34,13 @@ arr.forEach(function (el) {
     }
 })
 console.log(nArr);
+
+
+
+// 2
+const res_2 = arr.map((el)=>el % 2 === 0?'чет':'нечет');
+console.log(res_2);
+
+const newArr = [];
+arr.forEach((el)=>el % 2 === 0? newArr.push('чет'):newArr.push('нечет'));
+console.log(newArr);
