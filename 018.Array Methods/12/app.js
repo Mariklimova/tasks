@@ -5,9 +5,11 @@
 // [“ann”, “school”, “hschool”, “borabora”] -> [“ann”, “hschool”]
 
 
-let n = prompt('введите количество элементов массива');
-let arr = [];
+const n = prompt('введите количество элементов массива');
+const arr = [];
 
+
+// 1
 for (let i = 0; i < n; i++) {
     let nArr = prompt('введите элементы массива');
     if (isNaN(nArr)) {
@@ -25,5 +27,15 @@ let res = arr.filter(function (elem) {
         return false;
     }
 });
-
 console.log(res);
+
+
+// 2
+for (let i = 0; i < n; i++) {
+    let nArr = prompt('введите элементы массива');
+    isNaN(nArr) ? arr.push(nArr) : console.log('error');
+}
+
+
+const res_2 = arr.filter((elem) => elem[0] === 'a' || elem[0] === 'h');
+console.log(res_2);

@@ -3,16 +3,25 @@
 
 
 const n = 6;
-let arr1 = [];
-let arr2 = [];
+const arr_1 = [];
+const arr_2 = [];
 
-for (let i = 0; i < 6; i++) {
+for (let i = 0; i < n; i++) {
     if (i < 3) {
-        arr1.push(prompt())
+        arr_1.push(prompt())
     } else {
-        arr2.push(prompt())
+        arr_2.push(prompt())
     }
 }
 
-let arr3 = [...arr1, ...arr2];
-console.log(arr3);
+const arr_3 = [...arr_1, ...arr_2];
+console.log(arr_3);
+
+
+
+// 2
+for (let i = 0; i < n; i++) {
+    i < 3? arr_1.push(prompt()):arr_2.push(prompt())
+}
+const arr_23 = [...arr_1, ...arr_2];
+console.log(arr_23);

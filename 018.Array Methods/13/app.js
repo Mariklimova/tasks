@@ -7,19 +7,39 @@
 const n = prompt();
 const value = 'javascript'
 
-let arr = [];
+const arr = [];
 
+// // 1
+// for (let i = 0; i < n; i++) {
+//     let str = (prompt())
+//     if (isNaN(str)) {
+//         arr.push(str)
+//     }
+// }
+// let res = arr.filter(function (el) {
+//     return el.includes(value)
+// })
+// console.log(res);
+
+
+// 2
 for (let i = 0; i < n; i++) {
     let str = (prompt())
-    if (isNaN(str)) {
-        arr.push(str)
-    }
+    if (isNaN(str)) arr.push(str)
 }
-let res = arr.filter(function (el) {
-    return el.includes(value)
-})
-console.log(res);
 
+
+const res_2 = arr.filter((el)=>el.includes(value))
+console.log(res_2)
+
+
+const newArr = []
+arr.forEach((el)=>{
+    if (el.includes(value)) {
+        newArr.push(el)
+    }
+})
+console.log(newArr);
 
 
 

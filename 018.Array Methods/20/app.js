@@ -2,13 +2,11 @@
 // массива с клавиатуры. Оставьте в нем только положительные числа. Filter
 
 const n = +prompt();
-let arr = [];
+const arr = [];
 
 for (let i = 0; i < n; i++) {
-    let a = prompt();
-    if (!isNaN(a)) {
-        arr.push(a);
-    }
+    const a = prompt();
+    if (!isNaN(a)) arr.push(a);
 }
 
 // 1
