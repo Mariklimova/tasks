@@ -3,11 +3,11 @@
 
 const obj = {};
 
-let num1 = +prompt('введите первое число');
-let num2 = +prompt('введите второе число');
+const num_1 = +prompt('введите первое число');
+const num_2 = +prompt('введите второе число');
 
 
-obj.avg = (num1 + num2) / 2;
+obj.avg = (num_1 + num_2) / 2;
 console.log(obj);
 
 

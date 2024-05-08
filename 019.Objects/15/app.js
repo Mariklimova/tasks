@@ -6,11 +6,8 @@ const obj = {};
 let key = {};
 for (let i = 0; i < arr.length; i++) {
 
-    if (arr[i] % 2 === 0) {
-        key = true;
-    } else {
-        key = false;
-    }
+    if (arr[i] % 2 === 0) key = true;
+    else key = false;
 
     obj[arr[i]] = key;
 }

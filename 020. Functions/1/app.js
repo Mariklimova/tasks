@@ -7,5 +7,5 @@ const name_ = prompt('введите имя'),
 function getName(name_, surname) {
     return `Привет, ${name_} ${surname}`
 }
-let res = getName(name_, surname)
+const res = getName(name_, surname)
 console.log(res);

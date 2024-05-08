@@ -9,16 +9,29 @@ const database = [
 
 const data = { "label": "Test", "category": "test", "priority": 1 }
 
+// 1
+// const res = database.filter(function (elem) {
+//     if (elem.label === data.label) {
+//         return true
+//     }
+// })
 
-const res = database.filter(function (elem) {
-    if (elem.label === data.label) {
-        return true
-    }
+// if (res.length === 0) {
+//     database.push(data)
+//     console.log(database);
+// } else {
+//     console.log('Вы не можете созать lebel, так как он уже существует');
+// }
+
+
+// 2
+const res = database.filter((elem)=> {
+    if (elem.label === data.label) return true
 })
 
 if (res.length === 0) {
-database.push(data)
-console.log(database);
-}else{
+    database.push(data)
+    console.log(database);
+} else {
     console.log('Вы не можете созать lebel, так как он уже существует');
 }

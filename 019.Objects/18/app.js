@@ -7,9 +7,11 @@ const database = [
 ]
 const id = "javascript";
 
-let result = database.filter(function (el) {
+const result = database.filter(function (el) {
     if (el.id === id) {
         return true
     }
 })
 console.log(result);
+
+

@@ -7,7 +7,5 @@ const obj = {
     text: 23,
 }
 for (let key in obj) {
-    if (!isNaN(key)) {
-        console.log(key);
-    }
+    if (!isNaN(key))  console.log(key);
 }
