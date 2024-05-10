@@ -5,13 +5,11 @@
 
 const str = 'hschool';
 
-function isValidStr(str) {
-    return (isNaN(str)) ? true : false;
-}
 
 function changeStr(str) {
-    const bool = isValidStr(str);
-    if (bool === true) {
+    const isValidStr = (str) =>(isNaN(str)) ? true : false;
+
+    if (isValidStr(str) === true) {
         const nArr = [];
         str.split('').forEach((el, index) => {
             index % 2 === 0

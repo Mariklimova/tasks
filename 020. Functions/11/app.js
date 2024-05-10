@@ -26,3 +26,6 @@ function factorial(n) {
 }
 const fact = factorial(n);
 console.log(fact);
+
+
+

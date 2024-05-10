@@ -5,20 +5,34 @@
 
 const n = prompt();
 
-function makeArr(n) {
-    const arr = [];
+// 1
+// function makeArr(n) {
+//     const arr = [];
 
+//     for (let i = 0; i < n; i++) {
+//         arr.push(prompt())
+//     }
+//     return arr
+
+// }
+// const array = makeArr(n)
+
+// function findCount(array) {
+//     return array.length
+// }
+// const res = findCount(array)
+// console.log(res);
+
+
+// 2
+const makeArr = (n) => {
+    const arr = [];
     for (let i = 0; i < n; i++) {
         arr.push(prompt())
-
     }
     return arr
-
 }
-let array = makeArr(n)
+const resultArr = makeArr(n)
 
-function findCount(array) {
-    return array.length
-}
-let res = findCount(array)
-console.log(res);
+const findCount = (resultArr) => resultArr.length
+console.log(findCount(resultArr));

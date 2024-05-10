@@ -7,36 +7,57 @@
 
 const n = 5;
 
-function isValid(arr) {
-    let res = arr.every(function (elem) {
-        if (!isNaN(elem)) {
-            return true
-        } else {
-            return false
-        }
-    })
-    return res
-}
+// 1
+// function isValid(arr) {
+//     let res = arr.every(function (elem) {
+//         if (!isNaN(elem)) {
+//             return true
+//         } else {
+//             return false
+//         }
+//     })
+//     return res
+// }
 
-function doArr(n) {
+// function doArr(n) {
+//     const arr = [];
+//     for (let i = 0; i < n; i++) {
+//         arr.push(+prompt())
+//     }
+//     return arr
+// }
+// let arr = doArr(n);
+
+// function muliplyArr(arr) {
+//     let bool = isValid(arr)
+//     if (bool === true) {
+//         return arr.reduce((middle, el) => middle * el, 1)
+//     } else {
+//         return 'error'
+//     }
+// }
+
+// let mult = muliplyArr(arr)
+// console.log(mult);
+
+
+// 2
+const isValid = (arr) => arr.every((elem) => !isNaN(elem));
+
+const doArr = (n) => {
     const arr = [];
     for (let i = 0; i < n; i++) {
         arr.push(+prompt())
     }
     return arr
 }
-let arr = doArr(n);
+const arr = doArr(n);
 
-function muliplyArr(arr) {
+const muliplyArr = (arr) => {
     let bool = isValid(arr)
-    if (bool === true) {
-        return arr.reduce((middle, el) => middle * el, 1)
-    } else {
-        return 'error'
-    }
+    if (bool === true) return arr.reduce((middle, el) => middle * el, 1)
+    else return 'error'
 }
-
-let mult = muliplyArr(arr)
-console.log(mult);
+console.log(muliplyArr(arr));
 
 

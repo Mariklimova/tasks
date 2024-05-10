@@ -4,17 +4,29 @@
 
 const date = 'xx/xx/xxxx';
 
-function isValidSLSH(date) {
-    return date.includes('/') ? true : false;
-}
+// 1
+// function isValidSLSH(date) {
+//     return date.includes('/') ? true : false;
+// }
 
-function changeDate(date) {
-    const bool = isValidSLSH(date)
-    if (bool === true) {
-        return date.split('/').reverse().join('-');
-    } else {
-        return 'error'
-    }
+// function changeDate(date) {
+//     const bool = isValidSLSH(date)
+//     if (bool === true) {
+//         return date.split('/').reverse().join('-');
+//     } else {
+//         return 'error'
+//     }
+// }
+// const res = changeDate(date)
+// console.log(res);
+
+
+// 2
+
+const changeDate = (date) => {
+    const isValidSLSH = (date) => date.includes('/') ? true : false;
+
+    if (isValidSLSH(date) === true) return date.split('/').reverse().join('-');
+    else return 'error'
 }
-const res = changeDate(date)
-console.log(res);
+console.log(changeDate(date));

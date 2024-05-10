@@ -5,23 +5,39 @@
 
 const arr = ['Marina', 'Agata', 'Hanna', 'Alina', 'Helen'];
 
-function checkString(arr) {
-    let resultcheck = arr.every(function (el) {
-        if (isNaN(el)) {
-            return true
-        }
-    })
-    return resultcheck
-}
 
-function getSum(arr) {
+// 1
+// function checkString(arr) {
+//     const resultcheck = arr.every(function (el) {
+//         if (isNaN(el)) {
+//             return true
+//         }
+//     })
+//     return resultcheck
+// }
+
+// function getSum(arr) {
+//     const check = checkString(arr)
+//     if (check == true) {
+//         const result = arr.reduce(function (sum, elem) {
+//             return sum +' '+ elem
+//         }, '')
+//         return result
+//     }
+// }
+// let sum = getSum(arr);
+// console.log(sum);
+
+
+
+// 2
+const checkString = (arr) => arr.every((el) => isNaN(el))
+
+const getSum = (arr) => {
     const check = checkString(arr)
     if (check == true) {
-        let result = arr.reduce(function (sum, elem) {
-            return sum +' '+ elem
-        }, '')
+        const result = arr.reduce((sum, elem) => sum + ' ' + elem, '')
         return result
     }
 }
-let sum = getSum(arr);
-console.log(sum);
+console.log(getSum(arr));

@@ -6,31 +6,44 @@
 
 const arr = [2, 5, 8, 1];
 
-function checkNumber(arr) {
-    let res = arr.every(function (elem) {
-        if (!isNaN(elem)) {
-            return true
-        }
+// 1
+// function checkNumber(arr) {
+//     let res = arr.every(function (elem) {
+//         if (!isNaN(elem)) {
+//             return true
+//         }
 
-    })
-    return res
-}
+//     })
+//     return res
+// }
 
 
-function getSum(arr) {
+// function getSum(arr) {
+//     const check = checkNumber(arr)
+//     if (check == true) {
+//         let res = arr.reduce(function (sum, el) {
+//             return sum + el
+//         }, 0)
+//         return res
+//     } else {
+//         return 'error';
+//     }
+
+// }
+// let res2 = getSum(arr);
+// console.log(res2);
+
+
+
+// 2
+const checkNumber = (arr) => arr.every((elem) => !isNaN(elem));
+
+const getSum = (arr) => {
     const check = checkNumber(arr)
-    if (check == true) {
-        let res = arr.reduce(function (sum, el) {
-            return sum + el
-        }, 0)
-        return res
-    } else {
-        return 'error';
-    }
-
+    if (check == true) return arr.reduce((sum, el) => sum + el, 0)
+    else return 'error';
 }
-let res2 = getSum(arr);
-console.log(res2);
+console.log(getSum(arr));
 
 
 

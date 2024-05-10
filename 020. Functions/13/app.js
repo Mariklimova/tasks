@@ -10,7 +10,7 @@ function isValidStr(str1, str2) {
     return true
 }
 function checkStr(str1, str2) {
-    let res = isValidStr(str1, str2);
+    const res = isValidStr(str1, str2);
     if (res === true) {
         return str1.split('').sort().join() === str2.split('').sort().join() ? true : false
     } else {
