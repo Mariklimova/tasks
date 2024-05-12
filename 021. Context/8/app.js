@@ -9,7 +9,7 @@ function getFuncion() {
         console.log(count);
     }
 }
-let res = getFuncion()
+const res = getFuncion()
 res();
 res();
 res();

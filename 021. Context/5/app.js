@@ -6,7 +6,7 @@
 // active: true / false
 // }
 
-let email = 'mariku22@mail.by';
+const email = 'mariku22@mail.by';
 
 function getEmail(email) {
     // return {email:email, active:email.includes('@')&&(email.includes('com'))||email.includes('by')? true:false}

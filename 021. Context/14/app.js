@@ -8,7 +8,7 @@ const obj = {
     age: 25
 };
 
-let res = (function (obj) {
+const res = (function (obj) {
     let count = 0;
     for (const key in obj) {
         if (obj[key]) {

@@ -9,7 +9,7 @@ function concatStr() {
     })
 
 }
-let res = concatStr()
+const res = concatStr()
 res('Я');
 res('учусь');
 res('в');

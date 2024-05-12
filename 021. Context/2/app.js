@@ -8,6 +8,6 @@ const textAnalyzer = {
         return this.text.length;
     }
 };
-let res = textAnalyzer.getTextLength()
+const res = textAnalyzer.getTextLength()
 console.log(res);
 

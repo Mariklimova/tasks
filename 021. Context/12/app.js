@@ -24,5 +24,5 @@ function counterLetter(str, letter) {
         return 'error'
     }
 }
-let res = counterLetter(str, letter);
+const res = counterLetter(str, letter);
 console.log(res);

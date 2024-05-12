@@ -5,7 +5,7 @@
 function getPassword() {
     let pwd = '';
     return function () {
-        pwd += Math.round(Math.random() * 9)
+        pwd += Math.round(Math.random() * 9);
         console.log(pwd);
     }
 }

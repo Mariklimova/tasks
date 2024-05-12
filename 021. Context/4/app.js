@@ -3,16 +3,29 @@
 
 const arr = ['jkklk', 'hnkjoijij', 'vfj', 'jdfddfjfghjghj'];
 
-function doMaxMin(arr) {
+// 1
+// function doMaxMin(arr) {
+//     let max = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i].length > max) {
+//             max = arr[i].length;
+//         }
+
+//     }
+//     const maxWord = arr.filter((elem) => (elem.length === max) ? elem : null)
+//     return maxWord
+// }
+// let res = doMaxMin(arr);
+// console.log(res);
+
+
+
+// 2
+const findMax = (arr) => {
     let max = 0;
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i].length > max) {
-            max = arr[i].length;
-        }
-
+        if (arr[i].length > max) max = arr[i].length;
     }
-    let maxWord = arr.filter((elem) => (elem.length === max) ? elem : null)
-    return maxWord
+    return arr.filter((elem) => (elem.length === max) ? elem : null);
 }
-let res = doMaxMin(arr);
-console.log(res);
+console.log(findMax(arr));

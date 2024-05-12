@@ -14,7 +14,7 @@ function doArr(len) {
     }
     return arr
 }
-let arr = doArr(len)
+const arr = doArr(len)
 
 function filterArr(arr, n) {
     let res = arr.filter(function (el) {
