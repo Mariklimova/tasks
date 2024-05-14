@@ -3,6 +3,12 @@
 
 const button = document.querySelector('.btn');
 
-button.addEventListener('click', function () {
-    alert('Hello')
-})
+
+// 1
+// button.addEventListener('click', function () {
+//     alert('Hello')
+// });
+
+
+// 2
+button.addEventListener('click', () => alert('Hello'));

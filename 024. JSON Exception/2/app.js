@@ -13,5 +13,5 @@ function findStr(arr) {
         return error.message
     }
 }
-let res = findStr(arr)
+const res = findStr(arr)
 console.log(res);

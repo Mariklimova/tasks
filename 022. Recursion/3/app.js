@@ -4,8 +4,8 @@
 let n = 5;
 
 function sumNum(n) {
-  if(n===0) return 0;
-  return n+sumNum(n-1)  
+  if (n === 0) return 0;
+  return n + sumNum(n - 1)
 }
 const res = sumNum(n);
 console.log(res);

@@ -3,8 +3,9 @@
 // для массива [1, 2, 3, 4, 5, 6, 2, 3, 4] функция должна вернуть [1, 2, 3, 4, 5, 6].
 
 const arr = [1, 2, 3, 4, 5, 6, 2, 3, 4];
-let nArr = [];
+const nArr = [];
 
+// 1
 function findSequence(arr) {
     for (let i = 0; i < arr.length; i++) {
         if (!nArr.includes(arr[i])) {
@@ -15,6 +16,9 @@ function findSequence(arr) {
 }
 const find = findSequence(arr)
 console.log(find);
+
+
+
 
 
 

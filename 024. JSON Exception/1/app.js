@@ -14,5 +14,5 @@ function isValidEven(num) {
     }
 
 }
-let result = isValidEven(num);
+const result = isValidEven(num);
 console.log(result);

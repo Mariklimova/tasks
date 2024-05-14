@@ -5,8 +5,10 @@
 
 const arr = [232, 45, 6, 77, 6];
 
+
+// 1
 function checkPositiv(arr) {
-    let check = arr.every(function (el) {
+    const check = arr.every(function (el) {
         if (el > 0) {
             return true
         } else {
@@ -17,9 +19,9 @@ function checkPositiv(arr) {
 }
 
 function getMultiplay(arr) {
-    let check = checkPositiv(arr);
+    const check = checkPositiv(arr);
     if (check) {
-        let nArr = [];
+        const nArr = [];
         for (let i = 0; i < arr.length; i++) {
             nArr.push(arr[i] * 2)
         }
@@ -28,5 +30,17 @@ function getMultiplay(arr) {
         return 'error'
     }
 }
-let res = getMultiplay(arr);
-console.log(res);
+const result = getMultiplay(arr);
+console.log(result);
+
+
+
+// 2
+
+const getMultiplay_2 = (arr) => {
+    const checkPositiv = (arr) => arr.every((el) => (el > 0));
+
+    if (checkPositiv(arr)) return arr.map((el) => el * 2);
+    else return 'error'
+}
+console.log(getMultiplay_2(arr));

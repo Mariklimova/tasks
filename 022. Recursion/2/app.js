@@ -10,8 +10,6 @@ function getNums(i) {
     } else {
         return getNums(i-1)
     }
-
-
 }
 let res = getNums(i)
 console.log(res);
