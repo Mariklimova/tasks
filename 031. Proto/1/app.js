@@ -12,9 +12,7 @@ btn.addEventListener('click', () => {
     try {
         if (!inp.value) throw new Error('value is empty')
         arr.push(inp.value);
-        const sum = arr.reduce((sum, el) => {
-            return sum + +el;
-        }, 0)
+        const sum = arr.reduce((sum, el) => sum + +el, 0)
         p.textContent = sum / arr.length
         inp.value = '';
     } catch (error) {

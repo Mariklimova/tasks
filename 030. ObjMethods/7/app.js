@@ -13,9 +13,9 @@ function findVal(obj, str) {
     try {
         let val = Object.values(obj);
         if (val.includes(str)) return true
-        else throw new Error ('error')
+        else throw new Error('error')
     } catch (error) {
-return error.message
+        return error.message
     }
 }
 let res = findVal(obj, str);

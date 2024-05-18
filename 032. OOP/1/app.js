@@ -47,12 +47,21 @@
 // console.log(singer.getAutograph());
 
 // 4
+// class Singer {
+
+//     getAutograph = (name,surname) => {
+//         return `${name} ${surname}`
+//     }
+
+// }
+// const singer = new Singer();
+// console.log(singer.getAutograph('Agata', 'Klimova'));
+
+
+// 5
 class Singer {
 
-    getAutograph = (name,surname) => {
-        return `${name} ${surname}`
-    }
-
+    getAutograph = (name,surname) => `${name} ${surname}`
 }
 const singer = new Singer();
 console.log(singer.getAutograph('Agata', 'Klimova'));

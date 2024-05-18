@@ -7,6 +7,6 @@ function sumCheck() {
 }
 sumCheck();
 sumCheck();
-sumCheck()
-sumCheck()
-sumCheck()
+sumCheck();
+sumCheck();
+sumCheck();

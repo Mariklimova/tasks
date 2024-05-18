@@ -13,14 +13,35 @@ function isValid(val) {
     })
 }
 
+// function sumElement(obj) {
+//     try {
+//         const val = Object.values(obj);
+//         isValid(val);
+//         const res = val.reduce(function (sum, el) {
+//             return sum += el;
+//         }, 0)
+//         return res
+//     } catch (error) {
+//         return error.message;
+//     }
+
+// }
+// const res = sumElement(obj);
+// console.log(res);
+
+
+// 2
+function isValid(val) {
+    val.forEach((el)=>{
+        if (isNaN(el)) throw new Error('value not number')
+    })
+}
+
 function sumElement(obj) {
     try {
         const val = Object.values(obj);
         isValid(val);
-        const res = val.reduce(function (sum, el) {
-            return sum += el;
-        }, 0)
-        return res
+        return val.reduce((sum, el)=> sum += el, 0)
     } catch (error) {
         return error.message;
     }

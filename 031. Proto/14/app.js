@@ -7,9 +7,16 @@
 
 const str = 'Why isn\'t my code working?';
 
-function isVaporwaveStr() {
-    const result = str.toUpperCase().split(' ').join('').split('').join('  ');
-    return result
-}
-const res = isVaporwaveStr(str);
-console.log(res);
+
+// 1
+// function isVaporwaveStr() {
+//     const result = str.toUpperCase().split(' ').join('').split('').join('  ');
+//     return result
+// }
+// const res = isVaporwaveStr(str);
+// console.log(res);
+
+
+// 2
+const isVaporwaveStr = () => str.toUpperCase().split(' ').join('').split('').join('  ');
+console.log(isVaporwaveStr());

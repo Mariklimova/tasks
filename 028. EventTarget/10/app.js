@@ -8,7 +8,7 @@ const par = document.querySelector('p');
 
 btn.addEventListener('click', () => {
     try {
-        let palindrome = inp.value.split('').reverse().join('')
+        const palindrome = inp.value.split('').reverse().join('')
         if (!isNaN(inp.value)) throw new Error('the value is not a string')
         if (inp.value === palindrome) {
             par.textContent = 'Это палиндром'
