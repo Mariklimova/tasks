@@ -3,36 +3,38 @@
 // где первая буква заглавная и метод upperEvery, который делает заглавной первую
 // букву каждого слова этой строки.
 
-class WordString {
-    str;
-    constructor(a) {
-        this.str = a;
-    }
-    reverseString = () => {
-        return this.str.split('').reverse().join('');
 
-    }
-    upperFirst = () => {
-        return this.str[0].toUpperCase() + this.str.slice(1)
+// 1
+// class WordString {
+//     str;
+//     constructor(a) {
+//         this.str = a;
+//     }
+//     reverseString = () => {
+//         return this.str.split('').reverse().join('');
 
-    }
-    upperEvery = () => {
-        let newStr = [];
-        let str1 = this.str.split(' ')
-        for (let i = 0; i < str1.length; i++) {
-            newStr.push(str1[i][0].toUpperCase() + str1[i].slice(1))
+//     }
+//     upperFirst = () => {
+//         return this.str[0].toUpperCase() + this.str.slice(1)
 
-        }
-        return newStr.join(' ')
-    }
-}
-const wordstring = new WordString('hello, world');
-console.log(wordstring.reverseString());
-console.log(wordstring.upperFirst());
-console.log(wordstring.upperEvery());
+//     }
+//     upperEvery = () => {
+//         let newStr = [];
+//         let str1 = this.str.split(' ')
+//         for (let i = 0; i < str1.length; i++) {
+//             newStr.push(str1[i][0].toUpperCase() + str1[i].slice(1))
+//         }
+//         return newStr.join(' ')
+//     }
+// }
+// const wordstring = new WordString('hello, world');
+// console.log(wordstring.reverseString());
+// console.log(wordstring.upperFirst());
+// console.log(wordstring.upperEvery());
 
 
 
+// 2
 // class WordString {
 //     str;
 //     constructor(a) {
@@ -59,3 +61,30 @@ console.log(wordstring.upperEvery());
 // console.log(wordstring.reverseString());
 // console.log(wordstring.upperFirst());
 // console.log(wordstring.upperEvery());
+
+
+
+// 3
+class WordString {
+    str;
+    constructor(a) {
+        this.str = a;
+    }
+    
+    reverseString = () => this.str.split('').reverse().join('');
+
+    upperFirst = () => this.str[0].toUpperCase() + this.str.slice(1);
+
+    upperEvery = () => {
+        let newStr = [];
+        let str1 = this.str.split(' ')
+        for (let i = 0; i < str1.length; i++) {
+            newStr.push(str1[i][0].toUpperCase() + str1[i].slice(1))
+        }
+        return newStr.join(' ')
+    }
+}
+const wordstring = new WordString('hello, world');
+console.log(wordstring.reverseString());
+console.log(wordstring.upperFirst());
+console.log(wordstring.upperEvery());

@@ -16,7 +16,6 @@ class Pwd {
 }
 class Validation extends Pwd{
     showPwd(){
-        
         return super.showPwd()
     }
 }

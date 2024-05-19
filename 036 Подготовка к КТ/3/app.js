@@ -12,7 +12,7 @@ const obj = {
 }
 
 function isValid(count) {
-    if (count ==0) throw new Error('Invalid')
+    if (count == 0) throw new Error('Invalid')
     return true
 }
 function countKeys(obj) {

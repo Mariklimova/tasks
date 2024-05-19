@@ -10,6 +10,7 @@ class MathСalculation {
     constructor(n) {
         this.n = n;
     }
+    
     pushArr = () => {
         for (let i = 0; i < this.n; i++) {
             this.arr.push(i)

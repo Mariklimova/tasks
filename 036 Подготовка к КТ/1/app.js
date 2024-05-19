@@ -18,7 +18,7 @@ function doArr(n) {
 
 
 function filterArrs(n) {
-    let res = doArr(n);
+    const res = doArr(n);
     return res.filter((el)=> el[0]==='a'||el[0]==='h' )
 }
 const filter = filterArrs(n);

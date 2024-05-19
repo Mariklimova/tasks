@@ -18,8 +18,8 @@ class NumberArray {
 
 class ConsoleArray extends NumberArray {
     multArr() {
-        let arr = super.multArr();
-        let result = arr.reduce(function (multyplay, el) {
+        const arr = super.multArr();
+        const result = arr.reduce(function (multyplay, el) {
             return multyplay * el;
         }, 1)
         return result

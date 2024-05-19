@@ -11,6 +11,7 @@ class Validator {
     getEmail() {
         return this.mail
     }
+    
     isEmail() {
         if (/^[\w]+\@[a-z]+\.[a-z]{1,5}/gm.test(this.mail)) {
             return true

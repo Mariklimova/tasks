@@ -15,7 +15,7 @@ function doArr(n) {
 }
 
 function filtArr(n) {
-    let res = doArr(n);
+    const res = doArr(n);
     return res.map((el) => "#" + el)
 
 }

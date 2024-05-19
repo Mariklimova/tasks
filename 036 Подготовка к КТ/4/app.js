@@ -8,8 +8,16 @@ const obj = {
     city: 'Minsk'
 }
 
-function doArr(obj) {
-    return Object.values(obj)
-}
-const res = doArr(obj);
-console.log(res);
+
+// 1
+// function doArr(obj) {
+//     return Object.values(obj)
+// }
+// const res = doArr(obj);
+// console.log(res);
+
+
+
+// 2
+const doArr = (obj) => Object.values(obj)
+console.log(doArr(obj));

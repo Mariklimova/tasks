@@ -30,7 +30,7 @@ app.get('/:id', (req, res) => {
             itemArr = [];
         }
 
-        if (i===arr.length-1 && itemArr.length>0) {
+        if (i === arr.length - 1 && itemArr.length > 0) {
             resArr.push(itemArr)
         }
     }

@@ -93,6 +93,41 @@
 
 
 // 4
+// class Calculator {
+//     MyA;
+//     MyB;
+//     constructor(a, b) {
+//         this.MyA = a;
+//         this.MyB = b;
+//     }
+//     getSum = () => {
+//         const res = this.a + this.b
+//         return res
+//     }
+//     getMinus = () => {
+//         const res1 = this.a - this.b
+//         return res1
+//     }
+//     getMultiply = () => {
+//         const res2 = this.a * this.b
+//         return res2
+//     }
+//     getDivide = () => {
+//         const res3 = this.a / this.b
+//         return res3
+//     }
+// }
+// const calculator = new Calculator();
+// calculator.a = 20;
+// calculator.b = 10;
+
+// console.log(calculator.getSum());
+// console.log(calculator.getMinus());
+// console.log(calculator.getMultiply());
+// console.log(calculator.getDivide());
+
+
+// 5
 class Calculator {
     MyA;
     MyB;
@@ -100,22 +135,13 @@ class Calculator {
         this.MyA = a;
         this.MyB = b;
     }
-    getSum = () => {
-        const res = this.a + this.b
-        return res
-    }
-    getMinus = () => {
-        const res1 = this.a - this.b
-        return res1
-    }
-    getMultiply = () => {
-        const res2 = this.a * this.b
-        return res2
-    }
-    getDivide = () => {
-        const res3 = this.a / this.b
-        return res3
-    }
+    getSum = () => this.a + this.b
+
+    getMinus = () => this.a - this.b
+
+    getMultiply = () => this.a * this.b
+
+    getDivide = () => this.a / this.b
 }
 const calculator = new Calculator();
 calculator.a = 20;

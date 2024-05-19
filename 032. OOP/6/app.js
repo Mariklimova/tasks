@@ -38,3 +38,7 @@ class ServerGetAll {
 }
 const serverGetAll = new ServerGetAll();
 console.log(serverGetAll.controller());
+
+
+
+// 2
