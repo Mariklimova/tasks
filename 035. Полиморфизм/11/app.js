@@ -21,18 +21,18 @@ class TwoSum {
 
     findIndices = () => {
         let indexArr = [];
-for (let index = 0; index < array.length; index++) {
-    
-    
-}
-        for (let i = 1; i < this.arr.length; i++) {
-            if (this.arr[i] + this.arr[i+1] == this.num){
-                indexArr.push(i, i+1);
+
+        for (let j = 0; j < this.arr.length; index++) {
+            for (let i = j + 1; i < this.arr.length; i++) {
+                if (this.arr[j] + this.arr[i] == this.num) {
+                    indexArr.push(j, i);
+
+                }
 
             }
-            
+            return indexArr
+
         }
-        return indexArr
     }
 }
 const twoSum = new TwoSum([2, 3, 4], 6);

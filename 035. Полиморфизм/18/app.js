@@ -6,7 +6,17 @@
 // Входные: new PascalsTriangle(1).generateTriangle() → Результат: [[1]]
 
 
+class PascalsTriangle{
+    constructor(numRows){
+        this.numRows = numRows
+    }
+    generateTriangle(){
 
+    }
+}
+
+const pascalsTriangle = new PascalsTriangle(5);
+console.log(pascalsTriangle.generateTriangle());
 
 
 

@@ -18,9 +18,9 @@ class CommonPrefix {
         for (let i = 0; i < this.prefix_arr.length; i++) {
             const current_word = this.prefix_arr[i]
             for (let j = 1; j < this.prefix_arr.length; j++) {
-if (current_word[j]) {
-    
-}
+                if (current_word[j]) {
+
+                }
             }
         }
     }

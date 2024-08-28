@@ -3,7 +3,23 @@
 // который переопределяет метод generateArray() и оставляет в массиве только чётные числа.
 // Входные: new EvenNumberFilter().generateArray() → Результат: [2, 4, 6, 8]
 
+class NumberArrayGenerator {
+    generateArray(){
+        const arr = [];
+        for (let i = 1; i <= 8; i++) {
+            arr.push(i)
+        }
+       return arr
+    }
+}
+class EvenNumberFilter extends NumberArrayGenerator {
+    generateArray(){
+        return super.generateArray().filter((el) => el % 2 === 0)
+    }
+}
 
+const evenNumberFilter = new EvenNumberFilter();
+console.log(evenNumberFilter.generateArray());
 
 
 

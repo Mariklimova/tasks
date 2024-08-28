@@ -7,6 +7,25 @@
 // Входные: new RandomNumberArrayGenerator().generateArray() → Результат: [13, 21, 8, 9, 14, 27] (может быть
 // другим, так как числа случайные)
 
+class RandomNumberArrayGenerator {
+    generateArray() {
+        const arr = [];
+        for (let i = 0; i <= 10; i++) {
+            arr.push(Math.round(Math.random() * 100) + 1);
+        }
+       return arr;
+    }
+}
+class MultipleFilter extends RandomNumberArrayGenerator {
+    generateArray() {
+        const number = super.generateArray();
+        return number.filter((el) => el % 3 === 0 || el % 7 === 0)
+
+    }
+}
+const multipleFilter = new MultipleFilter();
+console.log(multipleFilter.generateArray());
+
 
 
 

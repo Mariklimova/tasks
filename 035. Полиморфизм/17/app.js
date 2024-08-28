@@ -5,7 +5,21 @@
 //     Входные: new NumberProcessor().processNumbers() → Результат: [1, 2, 3, 4, 5]
 
 
+class NumberProcessor {
+    arr = [1, -1, -4, 3, 3, 5, 4, 4, 2, 2, 2];
+    processNumbers() {
+        return this.arr.filter((el) => el > 0)
+    }
+}
+class UniqueNumberProcessor extends NumberProcessor {
+    processNumbers() {
+        const positivArr = super.processNumbers();
+        return positivArr.filter((el, i) => i === positivArr.indexOf(el));
+    }
+}
 
+const uniqueNumberProcessor = new UniqueNumberProcessor();
+console.log(uniqueNumberProcessor.processNumbers());
 
 
 

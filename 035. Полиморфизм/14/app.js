@@ -11,6 +11,26 @@
 
 
 
+class NumberGenerator {
+    generateNumber(){
+        return Math.floor(Math.random() * 100) + 1;
+    }
+}
+
+class SquareRootCalculator extends NumberGenerator {
+    generateNumber() {
+        const number = super.generateNumber(); 
+        for (let i = 1; i <= number; i++) {
+            if (i * i === number) return `Результат: ${i} (для числа: ${number})`;
+        }
+        return `Нет целого квадратного корня для числа: ${number}`; 
+    }
+}
+
+const squareRootCalculator = new SquareRootCalculator();
+console.log(squareRootCalculator.generateNumber());
+
+
 
 
 
