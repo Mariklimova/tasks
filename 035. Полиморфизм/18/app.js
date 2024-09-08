@@ -6,16 +6,31 @@
 // Входные: new PascalsTriangle(1).generateTriangle() → Результат: [[1]]
 
 
-class PascalsTriangle{
-    constructor(numRows){
+class PascalsTriangle {
+    constructor(numRows) {
         this.numRows = numRows
     }
-    generateTriangle(){
+    generateTriangle() {
+        
+        const triangle = [];
 
+        for (let i = 0; i < this.numRows; i++) {
+            const row = [];
+            for (let j = 0; j <= i; j++) {
+                if (j === 0 || j === i) {
+                    row.push(1);
+                } else {
+                    row.push(triangle[i - 1][j - 1] + triangle[i - 1][j]);
+                }
+
+            }
+            triangle.push(row);
+        }
+        return triangle
     }
 }
 
-const pascalsTriangle = new PascalsTriangle(5);
+const pascalsTriangle = new PascalsTriangle(7);
 console.log(pascalsTriangle.generateTriangle());
 
 

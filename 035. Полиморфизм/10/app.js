@@ -6,28 +6,69 @@
 // Входные: new CommonPrefix(["interview", "interval", "internet"]) → Результат: "inte"
 
 
-
+// 1
 class CommonPrefix {
 
     constructor(arr) {
-        this.prefix_arr = arr;
+        this.arr = arr;
     }
 
     findLongestPrefix = () => {
-        const prefix = '';
-        for (let i = 0; i < this.prefix_arr.length; i++) {
-            const current_word = this.prefix_arr[i]
-            for (let j = 1; j < this.prefix_arr.length; j++) {
-                if (current_word[j]) {
+        let prefix = '';
+        const minWordLength = Math.min(...this.arr.map((el) => el.length));
+        for (let i = 0; i < minWordLength; i++) {
+            const letter = this.arr[0][i];
+            const result = this.arr.every((item) => item[i]);
+            if (!this.arr.every((item) => item[i]=== letter)) break
+            prefix += letter;
 
-                }
-            }
         }
+        return prefix
     }
 }
 
-const commonPrefix = new CommonPrefix(["flower", "flow", "flight"]);
+const commonPrefix = new CommonPrefix(["interview", "interval", "internet"]);
 console.log(commonPrefix.findLongestPrefix());
+
+
+// 2
+// class CommonPrefix {
+
+//     constructor(arr) {
+//         this.arr = arr;
+//     }
+
+//     findLongestPrefix = () => {
+//         let prefix = '';
+//         let letter = 0;
+//         let found = true;
+//         while (found) {
+//             for (let i = 0; i < this.arr.length - 1; i++) {
+//                 if (letter >= this.arr[i].length || letter>=this.arr[i + 1].length || this.arr[i][letter] !== this.arr[i + 1][letter]) {
+//                     found = false;
+//                     break
+//                 }
+//             }
+
+//             if (found) {
+//                 prefix += this.arr[0][letter]
+//                 letter++
+//             }
+//         }
+//         return prefix
+//     }
+// }
+
+// const commonPrefix = new CommonPrefix(["interview", "interval", "internet"]);
+// console.log(commonPrefix.findLongestPrefix());
+
+
+
+
+
+
+
+
 
 
 
