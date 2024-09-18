@@ -10,7 +10,7 @@ const sumNumber = (n) => {
     return +String(n)[0] + sumNumber(String(n).slice(1))
 }
 
-console.log(sumNumber(123));
+console.log(sumNumber(987));
 
 
 

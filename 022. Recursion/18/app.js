@@ -6,9 +6,9 @@
 
 
 const polindrom = (str) => {
-    if (str.length <= 0) return true;
-    if (str[0] === str[str.length - 1]) return true
-    return (str.slice(1, -1))
+    if (str.length <= 1) return true;
+    if (str[0] !== str[str.length - 1]) return false
+    return polindrom(str.slice(1, -1))
 }
 
 console.log(polindrom("madam"));

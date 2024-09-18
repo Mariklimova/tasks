@@ -4,7 +4,15 @@
 // Входные: [5, [6, [7, [8]]]] → Результат: 26
 
 
+const sumNumbers = (list) => {
+    let sum = 0;
+    for (const el of list) {
+        !Array.isArray(el) ? sum += el : sum += sumNumbers(el);
+    }
+    return sum;
+}
 
+console.log(sumNumbers([1, [2, [3]], 4]));
 
 
 
